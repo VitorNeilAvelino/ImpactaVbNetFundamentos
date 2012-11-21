@@ -22,7 +22,7 @@ Public Class ClienteRepositorio
             propriedades = sr.ReadLine().Split(";"c)
 
             Dim cliente As New Cliente()
-            cliente.Id = propriedades(0)
+            cliente.Id = New Guid(propriedades(0))
             cliente.Nome = propriedades(1)
             cliente.Endereco = propriedades(2)
             cliente.DataNascimento = Convert.ToDateTime(propriedades(3))
@@ -47,7 +47,7 @@ Public Class ClienteRepositorio
 
             If propriedades(1).Contains(nome) Then
                 Dim cliente As New Cliente()
-                cliente.Id = propriedades(0)
+                cliente.Id = New Guid(propriedades(0))
                 cliente.Nome = propriedades(1)
                 cliente.Endereco = propriedades(2)
                 cliente.DataNascimento = Convert.ToDateTime(propriedades(3))

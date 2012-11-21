@@ -31,10 +31,19 @@ Public Class FreteForm
                                     totalLabel.Text)
         TextoPuroRepositorio.Inserir(My.MySettings.Default.caminhoArquivoFretes, registro)
         MessageBox.Show("Gravação realizada com sucesso.")
-        
+
         'Limpar
         Formulario.Limpar(Me)
         freteLabel.Text = "0,0%"
         totalLabel.Text = "0,00"
+    End Sub
+
+    Private Sub FreteForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        DefinirPropriedadesControles()
+    End Sub
+
+    Private Sub DefinirPropriedadesControles()
+        clienteBindingSource.DataSource = New ClienteRepositorio().Selecionar()
+        clienteComboBox.SelectedIndex = -1
     End Sub
 End Class

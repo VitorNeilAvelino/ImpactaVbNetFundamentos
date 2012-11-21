@@ -35,7 +35,10 @@ Partial Class FreteForm
         Me.freteLabel = New System.Windows.Forms.Label()
         Me.totalLabel = New System.Windows.Forms.Label()
         Me.gravarButton = New System.Windows.Forms.Button()
+        Me.clienteComboBox = New System.Windows.Forms.ComboBox()
+        Me.clienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.freteErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.clienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'freteErrorProvider
@@ -143,11 +146,28 @@ Partial Class FreteForm
         Me.gravarButton.Text = "&Gravar"
         Me.gravarButton.UseVisualStyleBackColor = True
         '
+        'clienteComboBox
+        '
+        Me.clienteComboBox.DataSource = Me.clienteBindingSource
+        Me.clienteComboBox.DisplayMember = "Nome"
+        Me.clienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.clienteComboBox.FormattingEnabled = True
+        Me.clienteComboBox.Location = New System.Drawing.Point(339, 6)
+        Me.clienteComboBox.Name = "clienteComboBox"
+        Me.clienteComboBox.Size = New System.Drawing.Size(231, 21)
+        Me.clienteComboBox.TabIndex = 5
+        Me.clienteComboBox.ValueMember = "Id"
+        '
+        'clienteBindingSource
+        '
+        Me.clienteBindingSource.DataSource = GetType(Impacta.Dominio.Cliente)
+        '
         'FreteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(365, 175)
+        Me.ClientSize = New System.Drawing.Size(603, 175)
+        Me.Controls.Add(Me.clienteComboBox)
         Me.Controls.Add(Me.gravarButton)
         Me.Controls.Add(Me.ufComboBox)
         Me.Controls.Add(Me.valorTextBox)
@@ -162,6 +182,7 @@ Partial Class FreteForm
         Me.Name = "FreteForm"
         Me.Text = "Frete"
         CType(Me.freteErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.clienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,5 +199,7 @@ Partial Class FreteForm
     Friend WithEvents freteLabel As System.Windows.Forms.Label
     Friend WithEvents totalLabel As System.Windows.Forms.Label
     Friend WithEvents gravarButton As System.Windows.Forms.Button
+    Friend WithEvents clienteComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents clienteBindingSource As System.Windows.Forms.BindingSource
 
 End Class
