@@ -1,4 +1,6 @@
 ﻿Imports System.Windows.Forms
+Imports System.Drawing
+Imports System.Text.RegularExpressions
 
 Public Class Formulario
     Public Shared Sub Redimensionar(pictureBox As PictureBox)
@@ -74,7 +76,37 @@ Public Class Formulario
         Next
     End Sub
 
-    Shared Function ValidarCamposObrigatorios(formulario As IFormularioComErrorProvider) As Boolean
+    Public Shared Function ValidarCamposObrigatorios(formulario As IFormularioComErrorProvider) As Boolean
         Return ValidarCamposObrigatorios(formulario, formulario.ProvedorDeErro)
     End Function
+
+    ''' <summary>
+    ''' Modifica as propriedades da caixa de texto de acordo com o checkbox correspondente pela propriedade Tag.
+    ''' </summary>
+    ''' <param name="container">Container dentro do qual a caixa de texto está. Se não houver tabs ou groups, pode ser o próprio form.</param>
+    ''' <param name="disparador">CheckBox que foi clicado.</param>
+    ''' <remarks></remarks>
+    Public Shared Sub ModificarPropriedadesCaixaDeTexto(container As Control, disparador As Control)
+        For Each controle As Control In container.Controls
+            If controle.Tag Is Nothing OrElse disparador.Tag Is Nothing Then Continue For
+
+            If TypeOf controle Is TextBox Then
+
+                Dim id = Regex.Match(disparador.Tag.ToString(), "\|ID.\|", RegexOptions.IgnoreCase).Value
+
+                If controle.Tag.ToString().ToUpper().Contains(id.ToUpper()) Then
+                    Dim caixaDeTexto = DirectCast(controle, TextBox)
+                    Dim checkBox = DirectCast(disparador, CheckBox)
+
+                    caixaDeTexto.Enabled = Not checkBox.Checked
+
+                    If checkBox.Checked Then
+                        caixaDeTexto.BackColor = Color.Silver
+                    Else
+                        caixaDeTexto.BackColor = Color.White
+                    End If
+                End If
+            End If
+        Next
+    End Sub
 End Class

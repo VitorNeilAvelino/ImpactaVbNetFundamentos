@@ -71,6 +71,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbasForm.Designer.vb">
+      <DependentUpon>AbasForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbasForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SelecaoArquivoForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AbasForm.resx">
+      <DependentUpon>AbasForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelecaoArquivoForm.resx">
       <DependentUpon>SelecaoArquivoForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +125,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Roteiro\ImpactaVbNet1\Impacta.Infra.Apoio\Impacta.Infra.Apoio.vbproj">
+      <Project>{93848AC9-2C8A-4361-B01E-8140576390E9}</Project>
+      <Name>Impacta.Infra.Apoio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,9 +11,11 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Impacta.Infra.Repositorios.
 EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Impacta.VbNet1.Database", "Impacta.VbNet1.Database\Impacta.VbNet1.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Impacta.Infra.Apoio", "..\Roteiro\ImpactaVbNet1\Impacta.Infra.Apoio\Impacta.Infra.Apoio.vbproj", "{93848AC9-2C8A-4361-B01E-8140576390E9}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -32,6 +34,9 @@ Global
 		SccProjectUniqueName5 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Repositorios.SqlServer\\Impacta.Infra.Repositorios.SqlServer.vbproj
 		SccProjectName5 = ../Roteiro/ImpactaVbNet1/Impacta.Infra.Repositorios.SqlServer
 		SccLocalPath5 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Repositorios.SqlServer
+		SccProjectUniqueName6 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Apoio\\Impacta.Infra.Apoio.vbproj
+		SccProjectName6 = ../Roteiro/ImpactaVbNet1/Impacta.Infra.Apoio
+		SccLocalPath6 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Apoio
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +100,16 @@ Global
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
