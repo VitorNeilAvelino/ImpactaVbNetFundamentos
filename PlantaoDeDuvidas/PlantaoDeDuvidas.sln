@@ -13,9 +13,11 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Impacta.VbNet1.Database", "
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Impacta.Infra.Apoio", "..\Roteiro\ImpactaVbNet1\Impacta.Infra.Apoio\Impacta.Infra.Apoio.vbproj", "{93848AC9-2C8A-4361-B01E-8140576390E9}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls", "VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls.vbproj", "{E1EFD394-7B12-4E07-8C1E-3BC038048043}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -37,6 +39,9 @@ Global
 		SccProjectUniqueName6 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Apoio\\Impacta.Infra.Apoio.vbproj
 		SccProjectName6 = ../Roteiro/ImpactaVbNet1/Impacta.Infra.Apoio
 		SccLocalPath6 = ..\\Roteiro\\ImpactaVbNet1\\Impacta.Infra.Apoio
+		SccProjectUniqueName7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls\\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls.vbproj
+		SccProjectName7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls
+		SccLocalPath7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +115,16 @@ Global
 		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{93848AC9-2C8A-4361-B01E-8140576390E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
