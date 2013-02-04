@@ -24,6 +24,11 @@
             dataInicial = dataInicial.AddDays(1)
         End While
 
-        Return quantidadeDeDiasUteis - quantidadeFeriados
+        Dim retorno = quantidadeDeDiasUteis - quantidadeFeriados
+        If retorno < 0 Then
+            Return 0
+        End If
+
+        Return retorno
     End Function
 End Class
