@@ -15,9 +15,18 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Impacta.Infra.Apoio", "..\R
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls", "VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls.vbproj", "{E1EFD394-7B12-4E07-8C1E-3BC038048043}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Impacta.Infra.Apoio.Testes", "Impacta.Infra.Apoio.Testes\Impacta.Infra.Apoio.Testes.vbproj", "{38326CC6-0D05-4527-89D7-48E086F397DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4AD19E3-FF7F-4757-AFBD-858EFFC57AE2}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		PlantaoDeDuvidas.vsmdi = PlantaoDeDuvidas.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -42,6 +51,12 @@ Global
 		SccProjectUniqueName7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls\\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls.vbproj
 		SccProjectName7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls
 		SccLocalPath7 = VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls
+		SccProjectUniqueName8 = Impacta.Infra.Apoio.Testes\\Impacta.Infra.Apoio.Testes.vbproj
+		SccProjectName8 = Impacta.Infra.Apoio.Testes
+		SccLocalPath8 = Impacta.Infra.Apoio.Testes
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = PlantaoDeDuvidas.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +140,16 @@ Global
 		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E1EFD394-7B12-4E07-8C1E-3BC038048043}.Release|x86.ActiveCfg = Release|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{38326CC6-0D05-4527-89D7-48E086F397DD}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
