@@ -91,6 +91,7 @@
     <Compile Include="Pessoa.vb" />
     <Compile Include="RamoAtividade.vb" />
     <Compile Include="RegraNegocioException.vb" />
+    <Compile Include="Tabuada.vb" />
     <Compile Include="TipoDocumento.vb" />
   </ItemGroup>
   <ItemGroup>
