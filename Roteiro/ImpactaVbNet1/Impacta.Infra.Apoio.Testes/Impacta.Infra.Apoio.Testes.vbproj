@@ -84,6 +84,7 @@
     <Compile Include="LogarTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="TransformarTest.vb" />
+    <Compile Include="ValidarTest.vb" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.vbproj">
