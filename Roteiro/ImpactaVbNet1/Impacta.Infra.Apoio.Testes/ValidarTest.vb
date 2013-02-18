@@ -3,10 +3,13 @@
 Public Class ValidarTest
     <TestMethod()> _
     Public Sub EmailTest()
-        Dim endereco As String = "vitor.avelino@hotmail.r7"
-        Dim expected As Boolean = True
-        Dim actual As Boolean
-        actual = Validar.Email(endereco)
-        Assert.AreEqual(expected, actual)
+        Assert.IsTrue(Validar.Email("vitor.avelino@r7.com"))
+        Assert.IsTrue(Validar.Email("vitor-avelino@r7.com"))
+        Assert.IsTrue(Validar.Email("vitor_avelino@r7.com"))
+        Assert.IsTrue(Validar.Email("vitor_avelino@r7.com.br"))
+        Assert.IsTrue(Validar.Email("vitor_avelino@r-7.com.br"))
+
+        Assert.IsFalse(Validar.Email("vitor_avelino.r7.com"))
+        Assert.IsFalse(Validar.Email("vitor_avelino@r7.combustivel"))
     End Sub
 End Class

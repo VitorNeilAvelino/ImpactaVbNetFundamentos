@@ -29,6 +29,7 @@ Public Class Validar
 
     Shared Function Email(endereco As String) As Boolean
         'Return Regex.IsMatch(endereco, "^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$")
-        Return Regex.IsMatch(endereco, "^[\w-.]+@[\w-.]+\.\p{L}+$")
+        'Return Regex.IsMatch(endereco, "^[\w-.]{1,64}@[\w-.]{1,253}\.\p{L}+$")
+        Return Regex.IsMatch(endereco, "^[\w-.]{1,64}@[\w-.]{1,253}\.[a-zA-Z]{1,3}$")
     End Function
 End Class
