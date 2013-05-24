@@ -3,6 +3,8 @@ Imports System.Drawing
 Imports System.Text.RegularExpressions
 
 Public Class Formulario
+    Private Shared _validacaoObrigatorios = True
+    
     Public Shared Sub Redimensionar(pictureBox As PictureBox)
         'If pictureBox.Image Is Nothing Then Return
         If pictureBox.Image.Width > pictureBox.Width OrElse pictureBox.Image.Height > pictureBox.Height Then
@@ -12,24 +14,24 @@ Public Class Formulario
         End If
     End Sub
 
-    Public Shared Function ValidarCamposObrigatorios(ByVal formulario As Form, provedorDeErro As ErrorProvider) As Boolean
-        Dim validacao As Boolean = True
+    'Public Shared Function ValidarCamposObrigatorios(ByVal formulario As Form, provedorDeErro As ErrorProvider) As Boolean
+    '    Dim validacao As Boolean = True
 
-        For Each controle As Control In formulario.Controls
-            If controle.Tag <> Nothing AndAlso controle.Tag.ToString().Contains("*") Then
-                provedorDeErro.SetError(controle, String.Empty)
-                If controle.Text.Trim() = String.Empty OrElse
-                    (TypeOf controle Is MaskedTextBox AndAlso
-                     DirectCast(controle, MaskedTextBox).ObterTextoSemMascara() = String.Empty) Then
-                    validacao = False
-                    provedorDeErro.SetError(controle, "Campo obrigatório.")
-                    controle.Focus()
-                End If
-            End If
-        Next
+    '    For Each controle As Control In formulario.Controls
+    '        If controle.Tag <> Nothing AndAlso controle.Tag.ToString().Contains("*") Then
+    '            provedorDeErro.SetError(controle, String.Empty)
+    '            If controle.Text.Trim() = String.Empty OrElse
+    '                (TypeOf controle Is MaskedTextBox AndAlso
+    '                 DirectCast(controle, MaskedTextBox).ObterTextoSemMascara() = String.Empty) Then
+    '                validacao = False
+    '                provedorDeErro.SetError(controle, "Campo obrigatório.")
+    '                controle.Focus()
+    '            End If
+    '        End If
+    '    Next
 
-        Return validacao
-    End Function
+    '    Return validacao
+    'End Function
 
     Public Shared Function ValidarTipoDosDados(formulario As Form, provedorDeErro As ErrorProvider) As Boolean
         Dim validacao As Boolean = True
@@ -77,7 +79,7 @@ Public Class Formulario
     End Sub
 
     Public Shared Function ValidarCamposObrigatorios(formulario As IFormularioComErrorProvider) As Boolean
-        Return ValidarCamposObrigatorios(formulario, formulario.ProvedorDeErro)
+        Return ValidarCamposObrigatorios(DirectCast(formulario, Form), formulario.ProvedorDeErro)
     End Function
 
     ''' <summary>
@@ -86,6 +88,7 @@ Public Class Formulario
     ''' <param name="container">Container dentro do qual a caixa de texto está. Se não houver tabs ou groups, pode ser o próprio form.</param>
     ''' <param name="disparador">CheckBox que foi clicado.</param>
     ''' <remarks></remarks>
+    ''' 
     Public Shared Sub ModificarPropriedadesCaixaDeTexto(container As Control, disparador As Control)
         For Each controle As Control In container.Controls
             If controle.Tag Is Nothing OrElse disparador.Tag Is Nothing Then Continue For
@@ -109,4 +112,21 @@ Public Class Formulario
             End If
         Next
     End Sub
+    
+    Public Shared Function ValidarCamposObrigatorios(ByVal formulario As Control, provedorDeErro As ErrorProvider) As Boolean
+        For Each controle As Control In formulario.Controls
+            If controle.Tag <> Nothing AndAlso controle.Tag.ToString().Contains("*") Then
+                provedorDeErro.SetError(controle, String.Empty)
+                If controle.Text.Trim() = String.Empty OrElse
+                    (TypeOf controle Is MaskedTextBox AndAlso
+                     DirectCast(controle, MaskedTextBox).ObterTextoSemMascara() = String.Empty) Then
+                    _validacaoObrigatorios = False
+                    provedorDeErro.SetError(controle, "Campo obrigatório.")
+                    controle.Focus()
+                End If
+            End If
+            ValidarCamposObrigatorios(controle, provedorDeErro)
+        Next
+        Return _validacaoObrigatorios
+    End Function
 End Class

@@ -37,14 +37,16 @@ Partial Class ClientesForm
         Me.nascimentoMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.cpfMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.clientesErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.clientesErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(40, 9)
+        Me.Label1.Location = New System.Drawing.Point(33, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 0
@@ -54,7 +56,7 @@ Partial Class ClientesForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(22, 40)
+        Me.Label2.Location = New System.Drawing.Point(15, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 13)
         Me.Label2.TabIndex = 0
@@ -64,7 +66,7 @@ Partial Class ClientesForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 71)
+        Me.Label3.Location = New System.Drawing.Point(5, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 13)
         Me.Label3.TabIndex = 0
@@ -74,7 +76,7 @@ Partial Class ClientesForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(40, 133)
+        Me.Label4.Location = New System.Drawing.Point(33, 152)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 13)
         Me.Label4.TabIndex = 0
@@ -84,7 +86,7 @@ Partial Class ClientesForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(36, 164)
+        Me.Label5.Location = New System.Drawing.Point(29, 183)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 13)
         Me.Label5.TabIndex = 0
@@ -94,9 +96,9 @@ Partial Class ClientesForm
         '
         Me.nomeTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nomeTextBox.Location = New System.Drawing.Point(95, 6)
+        Me.nomeTextBox.Location = New System.Drawing.Point(88, 25)
         Me.nomeTextBox.Name = "nomeTextBox"
-        Me.nomeTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.nomeTextBox.Size = New System.Drawing.Size(412, 20)
         Me.nomeTextBox.TabIndex = 1
         Me.nomeTextBox.Tag = "*"
         '
@@ -104,9 +106,9 @@ Partial Class ClientesForm
         '
         Me.enderecoTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.enderecoTextBox.Location = New System.Drawing.Point(95, 37)
+        Me.enderecoTextBox.Location = New System.Drawing.Point(88, 56)
         Me.enderecoTextBox.Name = "enderecoTextBox"
-        Me.enderecoTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.enderecoTextBox.Size = New System.Drawing.Size(412, 20)
         Me.enderecoTextBox.TabIndex = 2
         Me.enderecoTextBox.Tag = "*"
         '
@@ -114,9 +116,9 @@ Partial Class ClientesForm
         '
         Me.emailTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.emailTextBox.Location = New System.Drawing.Point(95, 130)
+        Me.emailTextBox.Location = New System.Drawing.Point(88, 149)
         Me.emailTextBox.Name = "emailTextBox"
-        Me.emailTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.emailTextBox.Size = New System.Drawing.Size(412, 20)
         Me.emailTextBox.TabIndex = 5
         Me.emailTextBox.Tag = "*EMAIL"
         '
@@ -124,16 +126,16 @@ Partial Class ClientesForm
         '
         Me.rendaTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.rendaTextBox.Location = New System.Drawing.Point(95, 161)
+        Me.rendaTextBox.Location = New System.Drawing.Point(88, 180)
         Me.rendaTextBox.Name = "rendaTextBox"
-        Me.rendaTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.rendaTextBox.Size = New System.Drawing.Size(412, 20)
         Me.rendaTextBox.TabIndex = 6
         Me.rendaTextBox.Tag = "*DECIMAL"
         '
         'gravarButton
         '
         Me.gravarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gravarButton.Location = New System.Drawing.Point(472, 193)
+        Me.gravarButton.Location = New System.Drawing.Point(472, 241)
         Me.gravarButton.Name = "gravarButton"
         Me.gravarButton.Size = New System.Drawing.Size(75, 23)
         Me.gravarButton.TabIndex = 7
@@ -144,7 +146,7 @@ Partial Class ClientesForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(40, 102)
+        Me.Label6.Location = New System.Drawing.Point(33, 121)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(34, 13)
         Me.Label6.TabIndex = 0
@@ -154,10 +156,10 @@ Partial Class ClientesForm
         '
         Me.nascimentoMaskedTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nascimentoMaskedTextBox.Location = New System.Drawing.Point(95, 68)
+        Me.nascimentoMaskedTextBox.Location = New System.Drawing.Point(88, 87)
         Me.nascimentoMaskedTextBox.Mask = "00/00/0000"
         Me.nascimentoMaskedTextBox.Name = "nascimentoMaskedTextBox"
-        Me.nascimentoMaskedTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.nascimentoMaskedTextBox.Size = New System.Drawing.Size(412, 20)
         Me.nascimentoMaskedTextBox.TabIndex = 3
         Me.nascimentoMaskedTextBox.Tag = "*DATETIME"
         Me.nascimentoMaskedTextBox.ValidatingType = GetType(Date)
@@ -166,10 +168,10 @@ Partial Class ClientesForm
         '
         Me.cpfMaskedTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cpfMaskedTextBox.Location = New System.Drawing.Point(95, 99)
+        Me.cpfMaskedTextBox.Location = New System.Drawing.Point(88, 118)
         Me.cpfMaskedTextBox.Mask = "000\.000\.000-00"
         Me.cpfMaskedTextBox.Name = "cpfMaskedTextBox"
-        Me.cpfMaskedTextBox.Size = New System.Drawing.Size(423, 20)
+        Me.cpfMaskedTextBox.Size = New System.Drawing.Size(412, 20)
         Me.cpfMaskedTextBox.TabIndex = 4
         Me.cpfMaskedTextBox.Tag = "*CPF"
         Me.cpfMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
@@ -179,30 +181,41 @@ Partial Class ClientesForm
         Me.clientesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.clientesErrorProvider.ContainerControl = Me
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.cpfMaskedTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.nascimentoMaskedTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.rendaTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.emailTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.enderecoTextBox)
+        Me.GroupBox1.Controls.Add(Me.nomeTextBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(535, 217)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Dados pessoais"
+        '
         'ClientesForm
         '
         Me.AcceptButton = Me.gravarButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 226)
-        Me.Controls.Add(Me.cpfMaskedTextBox)
-        Me.Controls.Add(Me.nascimentoMaskedTextBox)
+        Me.ClientSize = New System.Drawing.Size(559, 274)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gravarButton)
-        Me.Controls.Add(Me.rendaTextBox)
-        Me.Controls.Add(Me.emailTextBox)
-        Me.Controls.Add(Me.enderecoTextBox)
-        Me.Controls.Add(Me.nomeTextBox)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "ClientesForm"
         Me.Text = "Cadastro de Cliente"
         CType(Me.clientesErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -219,5 +232,6 @@ Partial Class ClientesForm
     Friend WithEvents nascimentoMaskedTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents cpfMaskedTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents clientesErrorProvider As System.Windows.Forms.ErrorProvider
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 
 End Class
