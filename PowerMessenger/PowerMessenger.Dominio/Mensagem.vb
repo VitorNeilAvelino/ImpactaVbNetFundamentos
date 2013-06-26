@@ -1,4 +1,4 @@
 ﻿Public Class Mensagem
     Public Property Destinatario() As Cliente
-    Public Property Mensagem() As String
+    Public Property Corpo() As String
 End Class
