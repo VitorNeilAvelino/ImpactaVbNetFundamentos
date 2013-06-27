@@ -1,4 +1,5 @@
-﻿Imports PowerMessenger.Dominio
+﻿Imports PowerMessenger.Dominio.Interfaces
+Imports PowerMessenger.Dominio
 
 Public Class Servidor
     Implements IServidor

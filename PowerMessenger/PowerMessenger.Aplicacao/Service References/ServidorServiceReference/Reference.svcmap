@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5218c90b-5825-4ced-bf63-ece2d35c82f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="4a79176b-cb12-41bf-b1ef-d734953c3a12" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="be2b77d1-6e41-4317-a157-57f83b9addbf" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="55829237-f727-4882-8199-bae911d5d0e8" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="PowerMessenger.Dominio.xsd" MetadataType="Schema" ID="4a2f0eec-4d0d-46b3-b991-6d88877c29c1" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

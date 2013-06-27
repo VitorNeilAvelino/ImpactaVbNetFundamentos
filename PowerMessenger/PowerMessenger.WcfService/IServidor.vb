@@ -1,4 +1,5 @@
-﻿Imports PowerMessenger.Dominio
+﻿Imports PowerMessenger.Dominio.Interfaces
+Imports PowerMessenger.Dominio
 
 <ServiceContract(CallbackContract:=GetType(IClienteCallback))>
 Public Interface IServidor
