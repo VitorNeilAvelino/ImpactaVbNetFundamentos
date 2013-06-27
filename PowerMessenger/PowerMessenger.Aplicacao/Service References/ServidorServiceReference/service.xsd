@@ -22,9 +22,7 @@
   </xs:element>
   <xs:element name="ReceberResponse">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" minOccurs="0" name="ReceberResult" nillable="true" type="q3:Mensagem" />
-      </xs:sequence>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5218c90b-5825-4ced-bf63-ece2d35c82f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="22a1e010-1fd5-44b1-9b5c-f999f0c2d8ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -8,7 +8,9 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -21,10 +23,10 @@
     <MetadataSource Address="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="4a79176b-cb12-41bf-b1ef-d734953c3a12" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="be2b77d1-6e41-4317-a157-57f83b9addbf" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="55829237-f727-4882-8199-bae911d5d0e8" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="PowerMessenger.Dominio.xsd" MetadataType="Schema" ID="4a2f0eec-4d0d-46b3-b991-6d88877c29c1" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="66c1e721-31f9-4fa1-90aa-c5941d9c61b6" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="948d9f02-a0f2-4efa-9435-9315058a9e12" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="153c8f31-5152-4810-8dd9-ed8fdafbcb25" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="PowerMessenger.Dominio.xsd" MetadataType="Schema" ID="c5297a4d-8b66-4870-b8bf-4fc74e7a887e" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

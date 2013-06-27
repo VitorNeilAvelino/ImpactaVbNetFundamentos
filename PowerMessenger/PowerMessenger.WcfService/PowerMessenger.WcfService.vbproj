@@ -110,7 +110,6 @@
     <Compile Include="Servidor.svc.vb">
       <DependentUpon>Servidor.svc</DependentUpon>
     </Compile>
-    <Compile Include="IServidor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

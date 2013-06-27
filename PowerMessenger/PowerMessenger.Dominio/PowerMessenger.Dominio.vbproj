@@ -52,6 +52,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -71,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Cliente.vb" />
     <Compile Include="Interfaces\IClienteCallback.vb" />
+    <Compile Include="Interfaces\IServidor.vb" />
     <Compile Include="Mensagem.vb" />
     <Compile Include="Servidor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

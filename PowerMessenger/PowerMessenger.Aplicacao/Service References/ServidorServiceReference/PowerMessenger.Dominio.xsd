@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="Mensagem">
     <xs:sequence>
       <xs:element minOccurs="0" name="Corpo" nillable="true" type="xs:string" />
@@ -19,27 +18,10 @@
   <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
   <xs:simpleType name="SituacaoConectividade">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Conectado">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Desconectado">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Ausente">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
+      <xs:enumeration value="NaoDefinida" />
+      <xs:enumeration value="Conectado" />
+      <xs:enumeration value="Desconectado" />
+      <xs:enumeration value="Ausente" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="SituacaoConectividade" nillable="true" type="tns:SituacaoConectividade" />

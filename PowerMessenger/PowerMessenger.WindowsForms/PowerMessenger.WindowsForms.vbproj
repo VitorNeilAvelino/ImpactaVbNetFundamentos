@@ -76,6 +76,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContatosForm.Designer.vb">
+      <DependentUpon>ContatosForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContatosForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MensageiroForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ContatosForm.resx">
+      <DependentUpon>ContatosForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MensageiroForm.resx">
       <DependentUpon>MensageiroForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +120,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -120,6 +130,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PowerMessenger.Aplicacao\PowerMessenger.Aplicacao.vbproj">
+      <Project>{9F9ED318-189C-45C1-8EF2-F2E56FB54594}</Project>
+      <Name>PowerMessenger.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerMessenger.Dominio\PowerMessenger.Dominio.vbproj">
+      <Project>{6A7E7E8D-2D75-4AC1-A221-B10E3DE35CBE}</Project>
+      <Name>PowerMessenger.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
