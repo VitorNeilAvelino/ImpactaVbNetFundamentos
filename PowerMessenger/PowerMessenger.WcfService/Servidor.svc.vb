@@ -5,27 +5,30 @@ Imports PowerMessenger.Dominio
 Public Class Servidor
     Implements IServidor
 
-    Private Shared ReadOnly ClientesLogados As Dictionary(Of String, IClienteCallback)
+    Private Shared ReadOnly ClientesLogados As Dictionary(Of Cliente, IClienteCallback)
 
     Shared Sub New()
-        ClientesLogados = New Dictionary(Of String, IClienteCallback)()
+        ClientesLogados = New Dictionary(Of Cliente, IClienteCallback)()
     End Sub
 
-    Private ReadOnly Property ClienteCallback As IClienteCallback
+    Private ReadOnly Property CallbackClienteAtual As IClienteCallback
         Get
             Return OperationContext.Current.GetCallbackChannel(Of IClienteCallback)()
         End Get
     End Property
 
     Public Sub Enviar(ByVal mensagem As Mensagem) Implements IServidor.Enviar
-        'Logar(mensagem.Destinatario)
-        Dim clienteCallback = ClientesLogados.First(Function(x) x.Key = mensagem.Destinatario.Login).Value
-        clienteCallback.Receber(mensagem)
+        ObterCallbackClienteDestino(mensagem.Destinatario).Receber(mensagem)
     End Sub
 
+    Private Function ObterCallbackClienteDestino(cliente As Cliente) As IClienteCallback
+        Return ClientesLogados.First(Function(x) x.Key.Login = cliente.Login).Value
+    End Function
+
     Public Sub Logar(cliente As Cliente) Implements IServidor.Logar
-        If Not ClientesLogados.Any(Function(x) x.Key = cliente.Login) Then
-            ClientesLogados.Add(cliente.Login, ClienteCallback)
+        If Not ClientesLogados.Any(Function(x) x.Key.Login = cliente.Login) Then
+            ClientesLogados.Add(cliente, CallbackClienteAtual)
+            CallbackClienteAtual.SelecionarClientesLogados(ClientesLogados)
         End If
     End Sub
 End Class

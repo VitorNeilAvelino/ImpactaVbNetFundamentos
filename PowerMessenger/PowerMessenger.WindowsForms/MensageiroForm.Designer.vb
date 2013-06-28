@@ -35,6 +35,8 @@ Partial Class MensageiroForm
         Me.enviarButton = New System.Windows.Forms.Button()
         Me.conversaTextBox = New System.Windows.Forms.TextBox()
         Me.mensageiroBackgroundWorker = New System.ComponentModel.BackgroundWorker()
+        Me.loginTextBox = New System.Windows.Forms.TextBox()
+        Me.logarButton = New System.Windows.Forms.Button()
         Me.mensageiroToolStripContainer.LeftToolStripPanel.SuspendLayout()
         Me.mensageiroToolStripContainer.SuspendLayout()
         Me.mensageiroToolStrip.SuspendLayout()
@@ -117,6 +119,8 @@ Partial Class MensageiroForm
         '
         'mensagemTextBox
         '
+        Me.mensagemTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.mensagemTextBox.Location = New System.Drawing.Point(244, 521)
         Me.mensagemTextBox.Multiline = True
         Me.mensagemTextBox.Name = "mensagemTextBox"
@@ -126,6 +130,7 @@ Partial Class MensageiroForm
         '
         'enviarButton
         '
+        Me.enviarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.enviarButton.Location = New System.Drawing.Point(755, 521)
         Me.enviarButton.Name = "enviarButton"
         Me.enviarButton.Size = New System.Drawing.Size(49, 113)
@@ -135,15 +140,39 @@ Partial Class MensageiroForm
         '
         'conversaTextBox
         '
+        Me.conversaTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.conversaTextBox.Location = New System.Drawing.Point(245, 12)
         Me.conversaTextBox.Multiline = True
         Me.conversaTextBox.Name = "conversaTextBox"
         Me.conversaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.conversaTextBox.Size = New System.Drawing.Size(504, 503)
+        Me.conversaTextBox.Size = New System.Drawing.Size(504, 384)
         Me.conversaTextBox.TabIndex = 4
         '
         'mensageiroBackgroundWorker
         '
+        '
+        'loginTextBox
+        '
+        Me.loginTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.loginTextBox.Location = New System.Drawing.Point(245, 402)
+        Me.loginTextBox.Multiline = True
+        Me.loginTextBox.Name = "loginTextBox"
+        Me.loginTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.loginTextBox.Size = New System.Drawing.Size(505, 113)
+        Me.loginTextBox.TabIndex = 0
+        '
+        'logarButton
+        '
+        Me.logarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.logarButton.Location = New System.Drawing.Point(756, 402)
+        Me.logarButton.Name = "logarButton"
+        Me.logarButton.Size = New System.Drawing.Size(49, 113)
+        Me.logarButton.TabIndex = 2
+        Me.logarButton.Text = "Logar"
+        Me.logarButton.UseVisualStyleBackColor = True
         '
         'MensageiroForm
         '
@@ -151,7 +180,9 @@ Partial Class MensageiroForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(816, 646)
         Me.Controls.Add(Me.conversaTextBox)
+        Me.Controls.Add(Me.logarButton)
         Me.Controls.Add(Me.enviarButton)
+        Me.Controls.Add(Me.loginTextBox)
         Me.Controls.Add(Me.mensagemTextBox)
         Me.Controls.Add(Me.mensageiroToolStripContainer)
         Me.IsMdiContainer = True
@@ -180,5 +211,7 @@ Partial Class MensageiroForm
     Friend WithEvents enviarButton As System.Windows.Forms.Button
     Friend WithEvents conversaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents mensageiroBackgroundWorker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents loginTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents logarButton As System.Windows.Forms.Button
 
 End Class
