@@ -34,6 +34,7 @@ Partial Class MensageiroForm
         Me.mensagemTextBox = New System.Windows.Forms.TextBox()
         Me.enviarButton = New System.Windows.Forms.Button()
         Me.conversaTextBox = New System.Windows.Forms.TextBox()
+        Me.mensageiroBackgroundWorker = New System.ComponentModel.BackgroundWorker()
         Me.mensageiroToolStripContainer.LeftToolStripPanel.SuspendLayout()
         Me.mensageiroToolStripContainer.SuspendLayout()
         Me.mensageiroToolStrip.SuspendLayout()
@@ -141,6 +142,9 @@ Partial Class MensageiroForm
         Me.conversaTextBox.Size = New System.Drawing.Size(504, 503)
         Me.conversaTextBox.TabIndex = 4
         '
+        'mensageiroBackgroundWorker
+        '
+        '
         'MensageiroForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -175,5 +179,6 @@ Partial Class MensageiroForm
     Friend WithEvents mensagemTextBox As System.Windows.Forms.TextBox
     Friend WithEvents enviarButton As System.Windows.Forms.Button
     Friend WithEvents conversaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents mensageiroBackgroundWorker As System.ComponentModel.BackgroundWorker
 
 End Class

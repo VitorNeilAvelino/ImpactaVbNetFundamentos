@@ -8,6 +8,7 @@ Public Class MensageiroForm
     Sub New()
         InitializeComponent()
         AddHandler _aplicacao.ClienteCallback.ReceberMensagem, AddressOf ReceberMensagem
+        _aplicacao.Logar(New Cliente With {.Login = "vavelino"})
     End Sub
 
     Private Sub contatosToolStripButton_Click(sender As System.Object, e As EventArgs) Handles contatosToolStripButton.Click
@@ -19,13 +20,23 @@ Public Class MensageiroForm
     End Sub
 
     Private Sub enviarButton_Click(sender As System.Object, e As EventArgs) Handles enviarButton.Click
-        Dim mensagem As New Mensagem()
-        mensagem.Corpo = mensagemTextBox.Text
-        mensagem.Destinatario.Login = "vavelino"
-        _aplicacao.Enviar(mensagem)
+        mensageiroBackgroundWorker.RunWorkerAsync()
     End Sub
 
     Private Sub ReceberMensagem(mensagem As Mensagem)
         conversaTextBox.Text = mensagem.Corpo
+    End Sub
+
+    Private Sub mensageiroBackgroundWorker_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles mensageiroBackgroundWorker.RunWorkerCompleted
+        Dim mensagem = DirectCast(e.Result, Mensagem)
+        conversaTextBox.Text = mensagem.Corpo
+    End Sub
+
+    Private Sub mensageiroBackgroundWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles mensageiroBackgroundWorker.DoWork
+        Dim mensagem As New Mensagem()
+        mensagem.Corpo = mensagemTextBox.Text
+        mensagem.Destinatario.Login = "vavelino"
+        _aplicacao.Enviar(mensagem)
+        e.Result = mensagem
     End Sub
 End Class

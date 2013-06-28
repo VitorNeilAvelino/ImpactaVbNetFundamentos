@@ -13,10 +13,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Logar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" minOccurs="0" name="cliente" nillable="true" type="q2:Cliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Receber">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" minOccurs="0" name="mensagem" nillable="true" type="q2:Mensagem" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio" minOccurs="0" name="mensagem" nillable="true" type="q3:Mensagem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

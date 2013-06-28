@@ -18,7 +18,7 @@ Public Class Servidor
     End Property
 
     Public Sub Enviar(ByVal mensagem As Mensagem) Implements IServidor.Enviar
-        Logar(mensagem.Destinatario)
+        'Logar(mensagem.Destinatario)
         Dim clienteCallback = ClientesLogados.First(Function(x) x.Key = mensagem.Destinatario.Login).Value
         clienteCallback.Receber(mensagem)
     End Sub

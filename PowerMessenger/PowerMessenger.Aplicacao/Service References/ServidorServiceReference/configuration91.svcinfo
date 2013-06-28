@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="k9lg74kSc6O11sBLSvDdn5FbbBc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="4iX1BXPmsKD8r35EE64PoP0Lnn0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="PowerMessengerServidorEndpoint">
       <properties>
@@ -118,10 +118,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PowerMessengerServidorEndpoint" contract="ServidorServiceReference.IServidor" bindingType="netTcpBinding" address="net.tcp://wec823.shcnet.com.br/PowerMessenger/Servidor.svc" bindingConfiguration="PowerMessengerServidorEndpoint">
+    <endpoint name="PowerMessengerServidorEndpoint" contract="ServidorServiceReference.IServidor" bindingType="netTcpBinding" address="net.tcp://vt3/PowerMessenger/Servidor.svc" bindingConfiguration="PowerMessengerServidorEndpoint">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://wec823.shcnet.com.br/PowerMessenger/Servidor.svc</serializedValue>
+          <serializedValue>net.tcp://vt3/PowerMessenger/Servidor.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
