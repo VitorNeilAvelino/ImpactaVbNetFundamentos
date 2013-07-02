@@ -22,6 +22,7 @@ Partial Class MensageiroForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MensageiroForm))
         Me.BottomToolStripPanel = New System.Windows.Forms.ToolStripPanel()
         Me.TopToolStripPanel = New System.Windows.Forms.ToolStripPanel()
@@ -29,16 +30,22 @@ Partial Class MensageiroForm
         Me.mensageiroLeftToolStripPanel = New System.Windows.Forms.ToolStripPanel()
         Me.ContentPanel = New System.Windows.Forms.ToolStripContentPanel()
         Me.mensageiroToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.clientesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.LoginDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SituacaoConectividadeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.mensageiroToolStrip = New System.Windows.Forms.ToolStrip()
         Me.contatosToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.mensagemTextBox = New System.Windows.Forms.TextBox()
         Me.enviarButton = New System.Windows.Forms.Button()
         Me.conversaTextBox = New System.Windows.Forms.TextBox()
         Me.mensageiroBackgroundWorker = New System.ComponentModel.BackgroundWorker()
-        Me.loginTextBox = New System.Windows.Forms.TextBox()
         Me.logarButton = New System.Windows.Forms.Button()
+        Me.mensageiroToolStripContainer.ContentPanel.SuspendLayout()
         Me.mensageiroToolStripContainer.LeftToolStripPanel.SuspendLayout()
         Me.mensageiroToolStripContainer.SuspendLayout()
+        CType(Me.clientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mensageiroToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -84,7 +91,8 @@ Partial Class MensageiroForm
         '
         'mensageiroToolStripContainer.ContentPanel
         '
-        Me.mensageiroToolStripContainer.ContentPanel.Size = New System.Drawing.Size(214, 646)
+        Me.mensageiroToolStripContainer.ContentPanel.Controls.Add(Me.clientesDataGridView)
+        Me.mensageiroToolStripContainer.ContentPanel.Size = New System.Drawing.Size(214, 549)
         Me.mensageiroToolStripContainer.Dock = System.Windows.Forms.DockStyle.Left
         '
         'mensageiroToolStripContainer.LeftToolStripPanel
@@ -93,9 +101,42 @@ Partial Class MensageiroForm
         Me.mensageiroToolStripContainer.Location = New System.Drawing.Point(0, 0)
         Me.mensageiroToolStripContainer.Name = "mensageiroToolStripContainer"
         Me.mensageiroToolStripContainer.RightToolStripPanelVisible = False
-        Me.mensageiroToolStripContainer.Size = New System.Drawing.Size(238, 646)
+        Me.mensageiroToolStripContainer.Size = New System.Drawing.Size(238, 549)
         Me.mensageiroToolStripContainer.TabIndex = 0
         Me.mensageiroToolStripContainer.TopToolStripPanelVisible = False
+        '
+        'clientesDataGridView
+        '
+        Me.clientesDataGridView.AllowUserToAddRows = False
+        Me.clientesDataGridView.AllowUserToDeleteRows = False
+        Me.clientesDataGridView.AutoGenerateColumns = False
+        Me.clientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.clientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LoginDataGridViewTextBoxColumn, Me.SituacaoConectividadeDataGridViewTextBoxColumn})
+        Me.clientesDataGridView.DataSource = Me.ClienteBindingSource
+        Me.clientesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.clientesDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.clientesDataGridView.Name = "clientesDataGridView"
+        Me.clientesDataGridView.ReadOnly = True
+        Me.clientesDataGridView.Size = New System.Drawing.Size(214, 549)
+        Me.clientesDataGridView.TabIndex = 0
+        '
+        'LoginDataGridViewTextBoxColumn
+        '
+        Me.LoginDataGridViewTextBoxColumn.DataPropertyName = "Login"
+        Me.LoginDataGridViewTextBoxColumn.HeaderText = "Login"
+        Me.LoginDataGridViewTextBoxColumn.Name = "LoginDataGridViewTextBoxColumn"
+        Me.LoginDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SituacaoConectividadeDataGridViewTextBoxColumn
+        '
+        Me.SituacaoConectividadeDataGridViewTextBoxColumn.DataPropertyName = "SituacaoConectividade"
+        Me.SituacaoConectividadeDataGridViewTextBoxColumn.HeaderText = "SituacaoConectividade"
+        Me.SituacaoConectividadeDataGridViewTextBoxColumn.Name = "SituacaoConectividadeDataGridViewTextBoxColumn"
+        Me.SituacaoConectividadeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataSource = GetType(PowerMessenger.Dominio.Cliente)
         '
         'mensageiroToolStrip
         '
@@ -121,20 +162,20 @@ Partial Class MensageiroForm
         '
         Me.mensagemTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.mensagemTextBox.Location = New System.Drawing.Point(244, 521)
+        Me.mensagemTextBox.Location = New System.Drawing.Point(244, 485)
         Me.mensagemTextBox.Multiline = True
         Me.mensagemTextBox.Name = "mensagemTextBox"
         Me.mensagemTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.mensagemTextBox.Size = New System.Drawing.Size(505, 113)
+        Me.mensagemTextBox.Size = New System.Drawing.Size(505, 52)
         Me.mensagemTextBox.TabIndex = 0
         '
         'enviarButton
         '
         Me.enviarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.enviarButton.Location = New System.Drawing.Point(755, 521)
+        Me.enviarButton.Location = New System.Drawing.Point(755, 514)
         Me.enviarButton.Name = "enviarButton"
-        Me.enviarButton.Size = New System.Drawing.Size(49, 113)
-        Me.enviarButton.TabIndex = 2
+        Me.enviarButton.Size = New System.Drawing.Size(49, 23)
+        Me.enviarButton.TabIndex = 1
         Me.enviarButton.Text = "Enviar"
         Me.enviarButton.UseVisualStyleBackColor = True
         '
@@ -146,52 +187,45 @@ Partial Class MensageiroForm
         Me.conversaTextBox.Location = New System.Drawing.Point(245, 12)
         Me.conversaTextBox.Multiline = True
         Me.conversaTextBox.Name = "conversaTextBox"
+        Me.conversaTextBox.ReadOnly = True
         Me.conversaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.conversaTextBox.Size = New System.Drawing.Size(504, 384)
-        Me.conversaTextBox.TabIndex = 4
+        Me.conversaTextBox.Size = New System.Drawing.Size(559, 467)
+        Me.conversaTextBox.TabIndex = 3
         '
         'mensageiroBackgroundWorker
         '
         '
-        'loginTextBox
-        '
-        Me.loginTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.loginTextBox.Location = New System.Drawing.Point(245, 402)
-        Me.loginTextBox.Multiline = True
-        Me.loginTextBox.Name = "loginTextBox"
-        Me.loginTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.loginTextBox.Size = New System.Drawing.Size(505, 113)
-        Me.loginTextBox.TabIndex = 0
-        '
         'logarButton
         '
         Me.logarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.logarButton.Location = New System.Drawing.Point(756, 402)
+        Me.logarButton.Location = New System.Drawing.Point(755, 485)
         Me.logarButton.Name = "logarButton"
-        Me.logarButton.Size = New System.Drawing.Size(49, 113)
+        Me.logarButton.Size = New System.Drawing.Size(49, 23)
         Me.logarButton.TabIndex = 2
         Me.logarButton.Text = "Logar"
         Me.logarButton.UseVisualStyleBackColor = True
+        Me.logarButton.Visible = False
         '
         'MensageiroForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 646)
-        Me.Controls.Add(Me.conversaTextBox)
+        Me.ClientSize = New System.Drawing.Size(816, 549)
         Me.Controls.Add(Me.logarButton)
+        Me.Controls.Add(Me.conversaTextBox)
         Me.Controls.Add(Me.enviarButton)
-        Me.Controls.Add(Me.loginTextBox)
         Me.Controls.Add(Me.mensagemTextBox)
         Me.Controls.Add(Me.mensageiroToolStripContainer)
         Me.IsMdiContainer = True
         Me.Name = "MensageiroForm"
         Me.Text = "Power Messenger"
+        Me.mensageiroToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.mensageiroToolStripContainer.LeftToolStripPanel.ResumeLayout(False)
         Me.mensageiroToolStripContainer.LeftToolStripPanel.PerformLayout()
         Me.mensageiroToolStripContainer.ResumeLayout(False)
         Me.mensageiroToolStripContainer.PerformLayout()
+        CType(Me.clientesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mensageiroToolStrip.ResumeLayout(False)
         Me.mensageiroToolStrip.PerformLayout()
         Me.ResumeLayout(False)
@@ -211,7 +245,10 @@ Partial Class MensageiroForm
     Friend WithEvents enviarButton As System.Windows.Forms.Button
     Friend WithEvents conversaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents mensageiroBackgroundWorker As System.ComponentModel.BackgroundWorker
-    Friend WithEvents loginTextBox As System.Windows.Forms.TextBox
     Friend WithEvents logarButton As System.Windows.Forms.Button
+    Friend WithEvents clientesDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents LoginDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SituacaoConectividadeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ClienteBindingSource As System.Windows.Forms.BindingSource
 
 End Class

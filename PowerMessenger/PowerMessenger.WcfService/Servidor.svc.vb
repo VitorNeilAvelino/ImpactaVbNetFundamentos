@@ -28,7 +28,15 @@ Public Class Servidor
     Public Sub Logar(cliente As Cliente) Implements IServidor.Logar
         If Not ClientesLogados.Any(Function(x) x.Key.Login = cliente.Login) Then
             ClientesLogados.Add(cliente, CallbackClienteAtual)
-            CallbackClienteAtual.SelecionarClientesLogados(ClientesLogados)
         End If
+        AtualizarListaDeContatosLogados()
+    End Sub
+
+    Private Sub AtualizarListaDeContatosLogados()
+        For Each contato In ClientesLogados
+            'If contato.Value.Equals(CallbackClienteAtual) Then Continue For
+            contato.Value.SelecionarClientesLogados(ClientesLogados.Keys.ToList())
+        Next
+        'CallbackClienteAtual.SelecionarClientesLogados(ClientesLogados.Where(Function(x) Not x.Value.Equals(CallbackClienteAtual)))
     End Sub
 End Class

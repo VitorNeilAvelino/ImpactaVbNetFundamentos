@@ -9,7 +9,6 @@
   <xs:element name="Mensagem" nillable="true" type="tns:Mensagem" />
   <xs:complexType name="Cliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SituacaoConectividade" type="tns:SituacaoConectividade" />
@@ -25,4 +24,10 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="SituacaoConectividade" nillable="true" type="tns:SituacaoConectividade" />
+  <xs:complexType name="ArrayOfCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCliente" nillable="true" type="tns:ArrayOfCliente" />
 </xs:schema>

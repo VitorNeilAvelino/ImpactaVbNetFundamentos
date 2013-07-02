@@ -58,6 +58,12 @@
   <wsdl:message name="IServidor_Receber_InputCallbackMessage">
     <wsdl:part name="parameters" element="tns:ReceberResponse" />
   </wsdl:message>
+  <wsdl:message name="IServidor_SelecionarClientesLogados_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarClientesLogados" />
+  </wsdl:message>
+  <wsdl:message name="IServidor_SelecionarClientesLogados_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarClientesLogadosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServidor">
     <wsdl:operation name="Enviar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServidor/Enviar" message="tns:IServidor_Enviar_InputMessage" />
@@ -70,6 +76,10 @@
     <wsdl:operation name="Receber">
       <wsdl:output wsaw:Action="http://tempuri.org/IServidor/Receber" message="tns:IServidor_Receber_OutputCallbackMessage" />
       <wsdl:input wsaw:Action="http://tempuri.org/IServidor/ReceberResponse" message="tns:IServidor_Receber_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarClientesLogados">
+      <wsdl:output wsaw:Action="http://tempuri.org/IServidor/SelecionarClientesLogados" message="tns:IServidor_SelecionarClientesLogados_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IServidor/SelecionarClientesLogadosResponse" message="tns:IServidor_SelecionarClientesLogados_InputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PowerMessengerServidorEndpoint" type="tns:IServidor">
@@ -96,6 +106,15 @@
     </wsdl:operation>
     <wsdl:operation name="Receber">
       <soap12:operation soapAction="http://tempuri.org/IServidor/Receber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarClientesLogados">
+      <soap12:operation soapAction="http://tempuri.org/IServidor/SelecionarClientesLogados" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

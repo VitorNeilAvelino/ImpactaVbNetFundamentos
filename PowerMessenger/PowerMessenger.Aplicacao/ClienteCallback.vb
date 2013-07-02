@@ -6,10 +6,14 @@ Imports System.ServiceModel
 Public Class ClienteCallback
     Implements IServidorCallback
 
-    'Public Delegate Function ReceberMensagemEventHandler(mensagem As Mensagem)
-    Public Event ReceberMensagem(mensagem As Mensagem)
+    Public Event AoReceberMensagem(mensagem As Mensagem)
+    Public Event AoSelecionarClientesLogados(clientes As IList(Of Cliente))
 
     Public Sub Receber(ByVal mensagem As Mensagem) Implements IServidorCallback.Receber
-        RaiseEvent ReceberMensagem(mensagem)
+        RaiseEvent AoReceberMensagem(mensagem)
+    End Sub
+
+    Public Sub SelecionarClientesLogados(ByVal clientes As List(Of Cliente)) Implements IServidorCallback.SelecionarClientesLogados
+        RaiseEvent AoSelecionarClientesLogados(clientes)
     End Sub
 End Class

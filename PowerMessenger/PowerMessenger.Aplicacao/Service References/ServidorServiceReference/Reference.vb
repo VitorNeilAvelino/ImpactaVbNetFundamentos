@@ -30,6 +30,9 @@ Namespace ServidorServiceReference
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Receber", ReplyAction:="http://tempuri.org/IServidor/ReceberResponse")>  _
         Sub Receber(ByVal mensagem As PowerMessenger.Dominio.Mensagem)
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/SelecionarClientesLogados", ReplyAction:="http://tempuri.org/IServidor/SelecionarClientesLogadosResponse")>  _
+        Sub SelecionarClientesLogados(ByVal clientes As System.Collections.Generic.List(Of PowerMessenger.Dominio.Cliente))
     End Interface
     
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
