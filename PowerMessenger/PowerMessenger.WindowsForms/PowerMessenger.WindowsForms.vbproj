@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PowerMessenger.WindowsForms.My.MyApplication</StartupObject>
     <RootNamespace>PowerMessenger.WindowsForms</RootNamespace>
-    <AssemblyName>PowerMessenger.WindowsForms</AssemblyName>
+    <AssemblyName>PowerMessenger</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -27,7 +27,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>PowerMessenger.WindowsForms.xml</DocumentationFile>
+    <DocumentationFile>PowerMessenger.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -37,7 +37,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>PowerMessenger.WindowsForms.xml</DocumentationFile>
+    <DocumentationFile>PowerMessenger.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -51,6 +51,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>powerMessengerIcone.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -141,6 +144,9 @@
       <Project>{6A7E7E8D-2D75-4AC1-A221-B10E3DE35CBE}</Project>
       <Name>PowerMessenger.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="powerMessengerIcone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

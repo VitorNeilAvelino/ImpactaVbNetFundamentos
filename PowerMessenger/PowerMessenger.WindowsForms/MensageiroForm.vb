@@ -52,7 +52,7 @@ Public Class MensageiroForm
         'Dim mensagem As New Mensagem()
         'mensagem.Corpo = mensagemTextBox.Text
         'mensagem.Destinatario.Login = "vavelino"
-        '_aplicacao.Enviar(mensagem)
+        '_aplicacao.Transmitir(mensagem)
         _aplicacao.Logar(New Contato With {.Login = mensagemTextBox.Text})
         logarButton.Visible = False
         mensagemTextBox.Text = String.Empty

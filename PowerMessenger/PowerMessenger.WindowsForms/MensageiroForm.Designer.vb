@@ -178,7 +178,7 @@ Partial Class MensageiroForm
         Me.enviarButton.Name = "enviarButton"
         Me.enviarButton.Size = New System.Drawing.Size(49, 23)
         Me.enviarButton.TabIndex = 1
-        Me.enviarButton.Text = "Enviar"
+        Me.enviarButton.Text = "Transmitir"
         Me.enviarButton.UseVisualStyleBackColor = True
         '
         'conversaTextBox
@@ -218,6 +218,7 @@ Partial Class MensageiroForm
         Me.Controls.Add(Me.enviarButton)
         Me.Controls.Add(Me.mensagemTextBox)
         Me.Controls.Add(Me.mensageiroToolStripContainer)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "MensageiroForm"
         Me.Text = "Power Messenger"

@@ -18,8 +18,8 @@ Namespace ServidorServiceReference
      System.ServiceModel.ServiceContractAttribute(ConfigurationName:="ServidorServiceReference.IServidor", CallbackContract:=GetType(ServidorServiceReference.IServidorCallback))>  _
     Public Interface IServidor
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Enviar", ReplyAction:="http://tempuri.org/IServidor/EnviarResponse")>  _
-        Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Transmitir", ReplyAction:="http://tempuri.org/IServidor/TransmitirResponse")>  _
+        Sub Transmitir(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Logar", ReplyAction:="http://tempuri.org/IServidor/LogarResponse")>  _
         Sub Logar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato)
@@ -69,8 +69,8 @@ Namespace ServidorServiceReference
             MyBase.New(callbackInstance, binding, remoteAddress)
         End Sub
         
-        Public Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem) Implements ServidorServiceReference.IServidor.Enviar
-            MyBase.Channel.Enviar(mensagem)
+        Public Sub Transmitir(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem) Implements ServidorServiceReference.IServidor.Transmitir
+            MyBase.Channel.Transmitir(mensagem)
         End Sub
         
         Public Sub Logar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato) Implements ServidorServiceReference.IServidor.Logar

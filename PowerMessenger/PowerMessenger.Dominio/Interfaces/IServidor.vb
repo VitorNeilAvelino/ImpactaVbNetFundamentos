@@ -5,7 +5,7 @@ Namespace Interfaces
     <ServiceContract(CallbackContract:=GetType(IClienteCallback))>
     Public Interface IServidor
         <OperationContract()>
-        Sub Enviar(mensagem As Mensagem)
+        Sub Transmitir(mensagem As Mensagem)
         <OperationContract()>
         Sub Logar(contato As Contato)
         <OperationContract()>

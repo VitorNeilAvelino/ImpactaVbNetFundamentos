@@ -40,11 +40,11 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio.Entidades" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServidor_Enviar_InputMessage">
-    <wsdl:part name="parameters" element="tns:Enviar" />
+  <wsdl:message name="IServidor_Transmitir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Transmitir" />
   </wsdl:message>
-  <wsdl:message name="IServidor_Enviar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:EnviarResponse" />
+  <wsdl:message name="IServidor_Transmitir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransmitirResponse" />
   </wsdl:message>
   <wsdl:message name="IServidor_Logar_InputMessage">
     <wsdl:part name="parameters" element="tns:Logar" />
@@ -71,9 +71,9 @@
     <wsdl:part name="parameters" element="tns:SelecionarClientesLogadosResponse" />
   </wsdl:message>
   <wsdl:portType name="IServidor">
-    <wsdl:operation name="Enviar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServidor/Enviar" message="tns:IServidor_Enviar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServidor/EnviarResponse" message="tns:IServidor_Enviar_OutputMessage" />
+    <wsdl:operation name="Transmitir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServidor/Transmitir" message="tns:IServidor_Transmitir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServidor/TransmitirResponse" message="tns:IServidor_Transmitir_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Logar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServidor/Logar" message="tns:IServidor_Logar_InputMessage" />
@@ -96,8 +96,8 @@
     <wsp:PolicyReference URI="#PowerMessengerServidorServiceEndpoint_policy">
     </wsp:PolicyReference>
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="Enviar">
-      <soap12:operation soapAction="http://tempuri.org/IServidor/Enviar" style="document" />
+    <wsdl:operation name="Transmitir">
+      <soap12:operation soapAction="http://tempuri.org/IServidor/Transmitir" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -17,7 +17,7 @@ Public Class ServidorService
         End Get
     End Property
 
-    Public Sub Enviar(ByVal mensagem As Mensagem) Implements IServidor.Enviar
+    Public Sub Transmitir(ByVal mensagem As Mensagem) Implements IServidor.Transmitir
         ObterCallbackClienteDestino(mensagem.Destinatario).Receber(mensagem)
     End Sub
 
