@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="VB" Debug="true" Service="PowerMessenger.WcfService.Servidor" CodeBehind="Servidor.svc.vb" %>

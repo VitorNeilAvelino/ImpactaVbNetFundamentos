@@ -95,7 +95,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Servidor.svc" />
+    <Content Include="ServidorService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -107,8 +107,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Servidor.svc.vb">
-      <DependentUpon>Servidor.svc</DependentUpon>
+    <Compile Include="ServidorService.svc.vb">
+      <DependentUpon>ServidorService.svc</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

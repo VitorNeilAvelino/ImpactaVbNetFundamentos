@@ -20,13 +20,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="66c1e721-31f9-4fa1-90aa-c5941d9c61b6" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="948d9f02-a0f2-4efa-9435-9315058a9e12" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="153c8f31-5152-4810-8dd9-ed8fdafbcb25" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
-    <MetadataFile FileName="PowerMessenger.Dominio.xsd" MetadataType="Schema" ID="c5297a4d-8b66-4870-b8bf-4fc74e7a887e" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/Servidor.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="36cdf66a-b3d8-48d2-bae3-a5770415a94a" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="ed9f8740-ed06-493f-b510-6d40c9a1c021" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="21bc90c5-33aa-4c3d-968a-88d580b65b8d" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="PowerMessenger.Dominio.Entidades1.xsd" MetadataType="Schema" ID="2c6e1df7-e25c-465d-8ad8-723adc5d045f" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

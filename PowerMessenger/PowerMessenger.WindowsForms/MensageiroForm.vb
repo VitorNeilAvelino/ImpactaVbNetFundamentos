@@ -1,20 +1,20 @@
-﻿Imports PowerMessenger.Dominio
+﻿
+Imports PowerMessenger.Dominio.Entidades
 Imports PowerMessenger.Aplicacao
 
 Public Class MensageiroForm
-
     Private ReadOnly _aplicacao As New ClienteAplicacao()
-    Private ReadOnly _eu As New Cliente With {.Login = Environment.UserName}
-    Private _destinatario As Cliente
-        
+    Private ReadOnly _eu As New Contato With {.Login = Environment.UserName}
+    Private _destinatario As Contato
+
     Sub New()
         InitializeComponent()
         AddHandler _aplicacao.ClienteCallback.AoReceberMensagem, AddressOf AoReceberMensagem
-        AddHandler _aplicacao.ClienteCallback.AoSelecionarClientesLogados, AddressOf AoSelecionarClientesLogados
+        AddHandler _aplicacao.ClienteCallback.AoSelecionarClientesLogados, AddressOf AoSelecionarContatosLogados
         Logar()
     End Sub
 
-    Private Sub AoSelecionarClientesLogados(ByVal clientes As IList(Of Cliente))
+    Private Sub AoSelecionarContatosLogados(ByVal clientes As IList(Of Contato))
         Dim contatos = clientes.Where(Function(x) x.Login <> _eu.Login)
 
         If Not contatos Is Nothing AndAlso contatos.Count > 0 Then
@@ -45,7 +45,7 @@ Public Class MensageiroForm
     End Sub
 
     Private Sub mensageiroBackgroundWorker_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles mensageiroBackgroundWorker.RunWorkerCompleted
-        ClienteBindingSource.DataSource = DirectCast(e.Result, IList(Of Cliente))
+        ClienteBindingSource.DataSource = DirectCast(e.Result, IList(Of Contato))
     End Sub
 
     Private Sub mensageiroBackgroundWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles mensageiroBackgroundWorker.DoWork
@@ -53,7 +53,7 @@ Public Class MensageiroForm
         'mensagem.Corpo = mensagemTextBox.Text
         'mensagem.Destinatario.Login = "vavelino"
         '_aplicacao.Enviar(mensagem)
-        _aplicacao.Logar(New Cliente With {.Login = mensagemTextBox.Text})
+        _aplicacao.Logar(New Contato With {.Login = mensagemTextBox.Text})
         logarButton.Visible = False
         mensagemTextBox.Text = String.Empty
         mensagemTextBox.Focus()
@@ -72,6 +72,10 @@ Public Class MensageiroForm
     End Sub
 
     Private Sub clientesDataGridView_CellClick(sender As System.Object, e As Windows.Forms.DataGridViewCellEventArgs) Handles clientesDataGridView.CellClick
-        _destinatario = DirectCast(clientesDataGridView.Rows(e.RowIndex).DataBoundItem, Cliente)
+        _destinatario = DirectCast(clientesDataGridView.Rows(e.RowIndex).DataBoundItem, Contato)
+    End Sub
+
+    Private Sub MensageiroForm_FormClosing(sender As System.Object, e As Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        _aplicacao.Deslogar(_eu)
     End Sub
 End Class

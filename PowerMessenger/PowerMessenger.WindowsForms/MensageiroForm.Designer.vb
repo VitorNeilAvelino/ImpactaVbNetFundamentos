@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports PowerMessenger.Dominio.Entidades
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class MensageiroForm
     Inherits System.Windows.Forms.Form
 
@@ -136,7 +138,7 @@ Partial Class MensageiroForm
         '
         'ClienteBindingSource
         '
-        Me.ClienteBindingSource.DataSource = GetType(PowerMessenger.Dominio.Cliente)
+        Me.ClienteBindingSource.DataSource = GetType(PowerMessenger.Dominio.Entidades.Contato)
         '
         'mensageiroToolStrip
         '
@@ -166,13 +168,13 @@ Partial Class MensageiroForm
         Me.mensagemTextBox.Multiline = True
         Me.mensagemTextBox.Name = "mensagemTextBox"
         Me.mensagemTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.mensagemTextBox.Size = New System.Drawing.Size(505, 52)
+        Me.mensagemTextBox.Size = New System.Drawing.Size(171, 52)
         Me.mensagemTextBox.TabIndex = 0
         '
         'enviarButton
         '
         Me.enviarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.enviarButton.Location = New System.Drawing.Point(755, 514)
+        Me.enviarButton.Location = New System.Drawing.Point(421, 514)
         Me.enviarButton.Name = "enviarButton"
         Me.enviarButton.Size = New System.Drawing.Size(49, 23)
         Me.enviarButton.TabIndex = 1
@@ -189,7 +191,7 @@ Partial Class MensageiroForm
         Me.conversaTextBox.Name = "conversaTextBox"
         Me.conversaTextBox.ReadOnly = True
         Me.conversaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.conversaTextBox.Size = New System.Drawing.Size(559, 467)
+        Me.conversaTextBox.Size = New System.Drawing.Size(225, 467)
         Me.conversaTextBox.TabIndex = 3
         '
         'mensageiroBackgroundWorker
@@ -198,7 +200,7 @@ Partial Class MensageiroForm
         'logarButton
         '
         Me.logarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.logarButton.Location = New System.Drawing.Point(755, 485)
+        Me.logarButton.Location = New System.Drawing.Point(421, 485)
         Me.logarButton.Name = "logarButton"
         Me.logarButton.Size = New System.Drawing.Size(49, 23)
         Me.logarButton.TabIndex = 2
@@ -210,7 +212,7 @@ Partial Class MensageiroForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 549)
+        Me.ClientSize = New System.Drawing.Size(482, 549)
         Me.Controls.Add(Me.logarButton)
         Me.Controls.Add(Me.conversaTextBox)
         Me.Controls.Add(Me.enviarButton)

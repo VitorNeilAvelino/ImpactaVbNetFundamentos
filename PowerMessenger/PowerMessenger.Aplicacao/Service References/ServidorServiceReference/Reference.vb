@@ -19,20 +19,23 @@ Namespace ServidorServiceReference
     Public Interface IServidor
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Enviar", ReplyAction:="http://tempuri.org/IServidor/EnviarResponse")>  _
-        Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Mensagem)
+        Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Logar", ReplyAction:="http://tempuri.org/IServidor/LogarResponse")>  _
-        Sub Logar(ByVal cliente As PowerMessenger.Dominio.Cliente)
+        Sub Logar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato)
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Deslogar", ReplyAction:="http://tempuri.org/IServidor/DeslogarResponse")>  _
+        Sub Deslogar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato)
     End Interface
     
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
     Public Interface IServidorCallback
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Receber", ReplyAction:="http://tempuri.org/IServidor/ReceberResponse")>  _
-        Sub Receber(ByVal mensagem As PowerMessenger.Dominio.Mensagem)
+        Sub Receber(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/SelecionarClientesLogados", ReplyAction:="http://tempuri.org/IServidor/SelecionarClientesLogadosResponse")>  _
-        Sub SelecionarClientesLogados(ByVal clientes As System.Collections.Generic.List(Of PowerMessenger.Dominio.Cliente))
+        Sub SelecionarClientesLogados(ByVal clientes As System.Collections.Generic.List(Of PowerMessenger.Dominio.Entidades.Contato))
     End Interface
     
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
@@ -66,12 +69,16 @@ Namespace ServidorServiceReference
             MyBase.New(callbackInstance, binding, remoteAddress)
         End Sub
         
-        Public Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Mensagem) Implements ServidorServiceReference.IServidor.Enviar
+        Public Sub Enviar(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem) Implements ServidorServiceReference.IServidor.Enviar
             MyBase.Channel.Enviar(mensagem)
         End Sub
         
-        Public Sub Logar(ByVal cliente As PowerMessenger.Dominio.Cliente) Implements ServidorServiceReference.IServidor.Logar
-            MyBase.Channel.Logar(cliente)
+        Public Sub Logar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato) Implements ServidorServiceReference.IServidor.Logar
+            MyBase.Channel.Logar(contato)
+        End Sub
+        
+        Public Sub Deslogar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato) Implements ServidorServiceReference.IServidor.Deslogar
+            MyBase.Channel.Deslogar(contato)
         End Sub
     End Class
 End Namespace
