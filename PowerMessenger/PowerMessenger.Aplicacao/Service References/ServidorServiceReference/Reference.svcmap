@@ -20,13 +20,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://wec823/PowerMessenger/ServidorService.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="36cdf66a-b3d8-48d2-bae3-a5770415a94a" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="ed9f8740-ed06-493f-b510-6d40c9a1c021" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
-    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="21bc90c5-33aa-4c3d-968a-88d580b65b8d" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
-    <MetadataFile FileName="PowerMessenger.Dominio.Entidades1.xsd" MetadataType="Schema" ID="2c6e1df7-e25c-465d-8ad8-723adc5d045f" SourceId="1" SourceUrl="net.tcp://localhost/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ece44f1a-f95c-4dcc-bacf-7cb314549e54" SourceId="1" SourceUrl="net.tcp://wec823/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="53ebb612-811f-4b4f-9f57-cbd8bc8e6989" SourceId="1" SourceUrl="net.tcp://wec823/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1b516ee2-eb8f-4d2c-bb54-abc04641ae6c" SourceId="1" SourceUrl="net.tcp://wec823/PowerMessenger/ServidorService.svc/mex" />
+    <MetadataFile FileName="PowerMessenger.Dominio.Entidades.xsd" MetadataType="Schema" ID="758014ea-b492-4e34-83c5-b3d910e2bcec" SourceId="1" SourceUrl="net.tcp://wec823/PowerMessenger/ServidorService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

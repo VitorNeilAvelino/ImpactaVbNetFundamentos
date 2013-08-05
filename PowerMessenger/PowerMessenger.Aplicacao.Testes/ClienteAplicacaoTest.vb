@@ -11,7 +11,7 @@ Public Class ClienteAplicacaoTest
         Dim cliente As New Contato With {.Login = "vavelino"}
         Dim mensagem As New Mensagem With {.Corpo = DateTime.Now.ToString(), .Destinatario = cliente}
 
-        _aplicacao.Enviar(mensagem)
+        _aplicacao.Transmitir(mensagem)
     End Sub
 
     <TestMethod()> _

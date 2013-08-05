@@ -7,8 +7,8 @@ Public Class ClienteAplicacao
     ReadOnly _contexto = New InstanceContext(ClienteCallback)
     ReadOnly _servidor = New ServidorClient(_contexto)
 
-    Public Sub Enviar(mensagem As Mensagem)
-        _servidor.Enviar(mensagem)
+    Public Sub Transmitir(mensagem As Mensagem)
+        _servidor.Transmitir(mensagem)
     End Sub
 
     Public Sub Logar(ByVal contato As Contato)

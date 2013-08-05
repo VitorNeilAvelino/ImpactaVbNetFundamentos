@@ -37,7 +37,7 @@ Public Class MensageiroForm
         Dim mensagem As New Mensagem()
         mensagem.Corpo = mensagemTextBox.Text
         mensagem.Destinatario.Login = _destinatario.Login
-        _aplicacao.Enviar(mensagem)
+        _aplicacao.Transmitir(mensagem)
     End Sub
 
     Private Sub AoReceberMensagem(mensagem As Mensagem)
