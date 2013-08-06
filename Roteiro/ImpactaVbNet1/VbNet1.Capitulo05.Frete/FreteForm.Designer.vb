@@ -174,6 +174,7 @@ Partial Class FreteForm
         'MaskedTextBox1
         '
         Me.MaskedTextBox1.Location = New System.Drawing.Point(190, 41)
+        Me.MaskedTextBox1.Mask = "#,###.00"
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
         Me.MaskedTextBox1.TabIndex = 6
