@@ -38,12 +38,30 @@ Public Class FreteForm
         totalLabel.Text = "0,00"
     End Sub
 
-    Private Sub FreteForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub FreteForm_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         DefinirPropriedadesControles()
     End Sub
 
     Private Sub DefinirPropriedadesControles()
         clienteBindingSource.DataSource = New ClienteRepositorio().Selecionar()
         clienteComboBox.SelectedIndex = -1
+    End Sub
+
+    Private Sub valorTextBox_KeyPress(sender As System.Object, e As Windows.Forms.KeyPressEventArgs) Handles valorTextBox.KeyPress
+        If e.KeyChar = "." Then
+            'e.Handled = True
+            'Beep()
+            e.KeyChar = ","
+            'avisoErrorProvider.SetError(valorTextBox, "Use vírgula como separador de decimais.")
+        End If
+    End Sub
+
+    Private Sub valorTextBox_Leave(sender As System.Object, e As EventArgs) Handles valorTextBox.Leave
+        ''valorTextBox.Text = valorTextBox.Text.Replace(".", ",")
+        'If valorTextBox.Text = String.Empty Then
+        '    valorTextBox.Text = 0
+        'End If
+        'valorTextBox.Text = FormatCurrency(valorTextBox.Text, 2, TriState.True, TriState.True, _
+        '                            TriState.True).Replace("R$", "").Trim
     End Sub
 End Class

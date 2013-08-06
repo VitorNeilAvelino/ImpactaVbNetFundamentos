@@ -23,6 +23,7 @@ Partial Class FreteForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FreteForm))
         Me.freteErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,8 +38,11 @@ Partial Class FreteForm
         Me.gravarButton = New System.Windows.Forms.Button()
         Me.clienteComboBox = New System.Windows.Forms.ComboBox()
         Me.clienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.avisoErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         CType(Me.freteErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.clienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.avisoErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'freteErrorProvider
@@ -162,11 +166,24 @@ Partial Class FreteForm
         '
         Me.clienteBindingSource.DataSource = GetType(Impacta.Dominio.Cliente)
         '
+        'avisoErrorProvider
+        '
+        Me.avisoErrorProvider.ContainerControl = Me
+        Me.avisoErrorProvider.Icon = CType(resources.GetObject("avisoErrorProvider.Icon"), System.Drawing.Icon)
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(190, 41)
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBox1.TabIndex = 6
+        '
         'FreteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(603, 175)
+        Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.clienteComboBox)
         Me.Controls.Add(Me.gravarButton)
         Me.Controls.Add(Me.ufComboBox)
@@ -183,6 +200,7 @@ Partial Class FreteForm
         Me.Text = "Frete"
         CType(Me.freteErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.clienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.avisoErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,5 +219,7 @@ Partial Class FreteForm
     Friend WithEvents gravarButton As System.Windows.Forms.Button
     Friend WithEvents clienteComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents clienteBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents avisoErrorProvider As System.Windows.Forms.ErrorProvider
+    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
 
 End Class
