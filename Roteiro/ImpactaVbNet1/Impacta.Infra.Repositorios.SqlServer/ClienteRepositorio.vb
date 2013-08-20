@@ -5,7 +5,11 @@ Public Class ClienteRepositorio
     Inherits RepositorioBase
     Implements IClienteRepositorio
 
-    Public Sub New()
+    'Public Sub New()
+    '    AbrirConexao()
+    'End Sub
+
+    Private Sub AbrirConexao()
         If Conexao.State <> ConnectionState.Open Then
             Conexao.Open()
         End If
@@ -45,6 +49,8 @@ Public Class ClienteRepositorio
     ''' Método Gravar usando ADO.NET. As instruções para a gravação estão dentro da procedure spGravarCliente.
     ''' </summary>
     Sub Gravar(cliente As Cliente) Implements IClienteRepositorio.Gravar
+        AbrirConexao()
+
         Dim comando As New SqlCommand("spGravarCliente", Conexao)
 
         Try
@@ -55,9 +61,14 @@ Public Class ClienteRepositorio
             comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = cliente.Endereco
             comando.ExecuteNonQuery()
         Finally
-            If comando IsNot Nothing Then comando.Dispose()
-            If Conexao IsNot Nothing AndAlso Conexao.State <> ConnectionState.Closed Then Conexao.Close()
+            FecharConexao()
         End Try
+    End Sub
+
+    Private Sub FecharConexao()
+        If Conexao IsNot Nothing AndAlso Conexao.State <> ConnectionState.Closed Then
+            Conexao.Close()
+        End If
     End Sub
 
     Sub Atualizar(cliente As Cliente) Implements IClienteRepositorio.Atualizar
