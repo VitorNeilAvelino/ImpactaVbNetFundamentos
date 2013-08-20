@@ -79,7 +79,9 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="PessoaTest.vb" />
     <Compile Include="TabuadaTest.vb" />
   </ItemGroup>
   <ItemGroup>
