@@ -16,9 +16,10 @@ Public Class Cliente
     ''' </summary>
     Public Property Cpf() As String
         Get
-            Return (From x In Documentos
-                Where x.Tipo = TipoDocumento.Cpf
-                Select x.Numero).FirstOrDefault
+            Return Documentos.Where(Function(x) x.Tipo = TipoDocumento.Cpf).FirstOrDefault().Numero
+            'Return (From x In Documentos
+            '    Where x.Tipo = TipoDocumento.Cpf
+            '    Select x.Numero).FirstOrDefault()
         End Get
         Set(value As String)
             Dim documento = New Documento()

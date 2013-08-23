@@ -15,9 +15,14 @@ Public Class ClienteRepositorioTest
     Public Sub GravarTest()
         Dim cliente As Cliente = New Cliente()
         cliente.Nome = "Vítor"
-        cliente.DataNascimento = Convert.ToDateTime("25/12/1970")
-        cliente.Email = "avelino.vitor@gmail.com"
         cliente.Endereco = "R. Tal, 40"
+        cliente.Email = "avelino.vitor@gmail.com"
+
+        cliente.DataNascimento = Convert.ToDateTime("25/12/1970")
+        cliente.Renda = 133
+
+        cliente.Cpf = "128.456.628-58"
+
         _clienteRepositorio.Gravar(cliente)
     End Sub
 

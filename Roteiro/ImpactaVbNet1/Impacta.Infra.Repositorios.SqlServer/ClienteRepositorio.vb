@@ -1,5 +1,6 @@
 ﻿Imports Impacta.Dominio
 Imports System.Data.SqlClient
+Imports System.Transactions
 
 Public Class ClienteRepositorio
     Inherits RepositorioBase
@@ -51,15 +52,40 @@ Public Class ClienteRepositorio
     Sub Gravar(cliente As Cliente) Implements IClienteRepositorio.Gravar
         AbrirConexao()
 
-        Dim comando As New SqlCommand("spGravarCliente", Conexao)
+        Const insertPessoa As String = "Insert into Pessoa (Nome, Endereco, Email) OUTPUT inserted.Id values (@Nome, @Endereco, @Email)"
+        Const insertCliente = "Insert Cliente (Pessoa_Id, DataNascimento, Renda) values (@Pessoa_Id, @DataNascimento, @Renda)"
+        Const insertDocumentos = "Insert PessoaDocumentos (Pessoa_Id, Tipo, Numero) value (@Pessoa_Id, @Tipo, @Numero)"
+
+        'Dim comando As New SqlCommand("spGravarCliente", Conexao)
+        Dim comandoPessoa As New SqlCommand(insertPessoa, Conexao)
+        comandoPessoa.CommandType = CommandType.Text
+        comandoPessoa.Parameters.Add("@Nome", SqlDbType.VarChar).Value = cliente.Nome
+        'comando.Parameters.Add("@DataNascimento", SqlDbType.Date).Value = cliente.DataNascimento
+        comandoPessoa.Parameters.Add("@Email", SqlDbType.VarChar).Value = cliente.Email
+        comandoPessoa.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = cliente.Endereco
+
+        Dim comandoCliente As New SqlCommand(insertCliente, Conexao)
+        comandoCliente.CommandType = CommandType.Text
+        comandoCliente.Parameters.Add("@DataNascimento", SqlDbType.Date).Value = cliente.DataNascimento
+        comandoCliente.Parameters.Add("@Renda", SqlDbType.Decimal).Value = cliente.Renda
+
+        Dim comandoDocumentos As New SqlCommand(insertDocumentos, Conexao)
+        comandoDocumentos.CommandType = CommandType.Text
+        comandoDocumentos.Parameters.Add("@Tipo", SqlDbType.Int).Value = cliente.Documentos(0).Tipo
+        comandoDocumentos.Parameters.Add("@Numero", SqlDbType.VarChar).Value = cliente.Documentos(0).Numero
 
         Try
-            comando.CommandType = CommandType.StoredProcedure
-            comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = cliente.Nome
-            comando.Parameters.Add("@DataNascimento", SqlDbType.Date).Value = cliente.DataNascimento
-            comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = cliente.Email
-            comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = cliente.Endereco
-            comando.ExecuteNonQuery()
+            Using transacao As New TransactionScope()
+                Dim pessoaId = comandoPessoa.ExecuteScalar()
+
+                comandoCliente.Parameters.Add("@Pessoa_Id", SqlDbType.Int).Value = pessoaId
+                comandoDocumentos.Parameters.Add("@Pessoa_Id", SqlDbType.Int).Value = pessoaId
+
+                comandoCliente.ExecuteNonQuery()
+                comandoDocumentos.ExecuteNonQuery()
+
+                transacao.Complete()
+            End Using
         Finally
             FecharConexao()
         End Try
