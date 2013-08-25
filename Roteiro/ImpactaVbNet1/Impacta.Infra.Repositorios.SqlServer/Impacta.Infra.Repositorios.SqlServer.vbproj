@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteRepositorio.vb" />
+    <Compile Include="FreteRepositorio.vb" />
     <Compile Include="RepositorioBase.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

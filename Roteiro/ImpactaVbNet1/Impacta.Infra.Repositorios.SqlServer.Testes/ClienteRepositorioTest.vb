@@ -29,7 +29,7 @@ Public Class ClienteRepositorioTest
     <TestMethod()>
     Public Sub AtualizarTest()
         Dim cliente As Cliente = New Cliente()
-        cliente.Id = Guid.NewGuid()
+        cliente.Guid = Guid.NewGuid()
         cliente.Nome = "Vítor Editado"
         cliente.DataNascimento = Convert.ToDateTime("25/12/1970")
         cliente.Email = "avelino.vitor@gmail.com"

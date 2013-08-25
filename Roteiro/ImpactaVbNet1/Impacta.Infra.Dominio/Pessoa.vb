@@ -1,11 +1,12 @@
 ﻿'ToDo: OO - herança
 Public MustInherit Class Pessoa
     Public Sub New()
-        Id = Guid.NewGuid()
+        Guid = Guid.NewGuid()
         Documentos = New List(Of Documento)
     End Sub
 
-    Public Property Id As New Guid()
+    Public Property Id As Integer
+    Public Property Guid As New Guid()
 
     'ToDo: OO - encapsulamento
     Private _nome As String

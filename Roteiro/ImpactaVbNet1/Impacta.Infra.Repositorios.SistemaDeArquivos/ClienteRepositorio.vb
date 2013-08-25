@@ -22,7 +22,7 @@ Public Class ClienteRepositorio
             propriedades = sr.ReadLine().Split(";"c)
 
             Dim cliente As New Cliente()
-            cliente.Id = New Guid(propriedades(0))
+            cliente.Guid = New Guid(propriedades(0))
             cliente.Nome = propriedades(1)
             cliente.Endereco = propriedades(2)
             cliente.DataNascimento = Convert.ToDateTime(propriedades(3))
@@ -47,7 +47,7 @@ Public Class ClienteRepositorio
 
             If propriedades(1).Contains(nome) Then
                 Dim cliente As New Cliente()
-                cliente.Id = New Guid(propriedades(0))
+                cliente.Guid = New Guid(propriedades(0))
                 cliente.Nome = propriedades(1)
                 cliente.Endereco = propriedades(2)
                 cliente.DataNascimento = Convert.ToDateTime(propriedades(3))
@@ -64,7 +64,7 @@ Public Class ClienteRepositorio
 
     Public Sub Gravar(cliente As Cliente) Implements IClienteRepositorio.Gravar
         Dim registro = String.Format("{0};{1};{2};{3};{4};{5};{6}",
-                                    cliente.Id,
+                                    cliente.Guid,
                                     cliente.Nome,
                                     cliente.Endereco,
                                     cliente.DataNascimento.ToShortDateString(),

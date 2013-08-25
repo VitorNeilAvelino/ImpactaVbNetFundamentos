@@ -28,7 +28,7 @@ Public Class ClienteRepositorio
 
         For Each registro In comando.ExecuteReader
             Dim cliente As New Cliente
-            cliente.Id = registro("Id")
+            cliente.Guid = registro("Id")
             cliente.Nome = registro("Nome")
             cliente.Endereco = registro("Endereco")
             cliente.Email = registro("Email")
@@ -102,7 +102,7 @@ Public Class ClienteRepositorio
 
         Try
             comando.CommandType = CommandType.StoredProcedure
-            comando.Parameters.Add("@Id", SqlDbType.VarChar).Value = cliente.Id
+            comando.Parameters.Add("@Id", SqlDbType.VarChar).Value = cliente.Guid
             comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = cliente.Nome
             comando.Parameters.Add("@DataNascimento", SqlDbType.Date).Value = cliente.DataNascimento
             comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = cliente.Email

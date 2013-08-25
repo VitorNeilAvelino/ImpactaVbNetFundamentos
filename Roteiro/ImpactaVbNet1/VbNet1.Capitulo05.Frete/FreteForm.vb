@@ -8,7 +8,7 @@ Public Class FreteForm
         frete.ValorCarga = Convert.ToDecimal(valorTextBox.Text)
         frete.Calcular(ufComboBox.Text)
 
-        freteLabel.Text = frete.PercentualFrete.ToString("P1")
+        freteLabel.Text = frete.Percentual.ToString("P1")
         totalLabel.Text = frete.ValorTotal.ToString("C2")
     End Sub
 

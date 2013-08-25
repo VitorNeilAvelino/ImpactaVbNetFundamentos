@@ -54,11 +54,13 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -88,6 +90,10 @@
     <ProjectReference Include="..\Impacta.Infra.Dominio\Impacta.Dominio.vbproj">
       <Project>{BE833C36-31AB-43BC-B9E0-48E054C92FF9}</Project>
       <Name>Impacta.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Infra.Repositorios.SqlServer\Impacta.Infra.Repositorios.SqlServer.vbproj">
+      <Project>{93AC4024-7185-4E13-83FD-E486F4C833B8}</Project>
+      <Name>Impacta.Infra.Repositorios.SqlServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
