@@ -92,6 +92,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ImpactaVbNet1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ImpressaoForm.Designer.vb">
+      <DependentUpon>ImpressaoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImpressaoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SelecaoArquivoForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrudForm.resx">
       <DependentUpon>CrudForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImpressaoForm.resx">
+      <DependentUpon>ImpressaoForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelecaoArquivoForm.resx">
       <DependentUpon>SelecaoArquivoForm.vb</DependentUpon>
