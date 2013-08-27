@@ -22,14 +22,9 @@ Partial Class ImpressaoForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewControl1 = New System.Windows.Forms.PrintPreviewControl()
         Me.SuspendLayout()
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
         '
         'PrintDocument1
         '
@@ -57,7 +52,6 @@ Partial Class ImpressaoForm
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewControl1 As System.Windows.Forms.PrintPreviewControl
 End Class
