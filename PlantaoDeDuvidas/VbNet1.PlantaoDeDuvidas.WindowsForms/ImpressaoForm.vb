@@ -1,16 +1,11 @@
 ﻿Public Class ImpressaoForm
-
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Dim myText As String = "Vertical text"
-
+    Private Sub PrintDocument1_PrintPage(sender As System.Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim fontFamily As New FontFamily("Lucida Console")
-        Dim font As New Font(fontFamily, 14, FontStyle.Regular, GraphicsUnit.Point)
-        Dim stringFormat As New StringFormat()
-        Dim solidBrush As New SolidBrush(Color.FromArgb(255, 0, 0, 255))
+        Dim font As New Font(fontFamily, 10, FontStyle.Regular, GraphicsUnit.Point)
 
-        stringFormat.FormatFlags = StringFormatFlags.DirectionVertical
-
-        'e.Graphics.DrawString(myText, font, solidBrush, 50, 50, stringFormat)
-
+        e.Graphics.TranslateTransform(50, 100)
+        e.Graphics.RotateTransform(-90)
+        e.Graphics.DrawString("ASP.NET", font, New SolidBrush(Color.Red), 0, 0)
+        e.Graphics.ResetTransform()
     End Sub
 End Class
