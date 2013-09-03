@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.VbNet1.PlantaoDeDuvidas.WindowsForms.ImpressaoForm
+            Me.MainForm = Global.VbNet1.PlantaoDeDuvidas.WindowsForms.CrudForm
         End Sub
     End Class
 End Namespace
