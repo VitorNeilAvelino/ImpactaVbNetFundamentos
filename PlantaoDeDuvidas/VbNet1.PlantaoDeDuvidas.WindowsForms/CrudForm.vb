@@ -11,4 +11,9 @@ Public Class CrudForm
         comando.ExecuteNonQuery()
         conexao.Close()
     End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        ImpressaoForm.Show()
+        Call New ImpressaoForm().Show()
+    End Sub
 End Class
