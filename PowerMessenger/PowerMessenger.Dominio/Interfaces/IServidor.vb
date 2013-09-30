@@ -6,7 +6,7 @@ Namespace Interfaces
     Public Interface IServidor
         <OperationContract()>
         Sub Transmitir(mensagem As Mensagem)
-        <OperationContract()>
+        <OperationContract(IsOneWay:=True)>
         Sub Logar(contato As Contato)
         <OperationContract()>
         Sub Deslogar(contato As Contato)

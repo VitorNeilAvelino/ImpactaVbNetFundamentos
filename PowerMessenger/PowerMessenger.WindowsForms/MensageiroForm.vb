@@ -6,6 +6,8 @@ Public Class MensageiroForm
     Private ReadOnly _aplicacao As New ClienteAplicacao()
     Private ReadOnly _eu As New Contato With {.Login = Environment.UserName}
     Private _destinatario As Contato
+    Delegate Sub DefinirDataSourceListaContatos(clientes As IList(Of Contato))
+
 
     Sub New()
         InitializeComponent()
@@ -14,15 +16,22 @@ Public Class MensageiroForm
         Logar()
     End Sub
 
-    Private Sub AoSelecionarContatosLogados(ByVal clientes As IList(Of Contato))
-        Dim contatos = clientes.Where(Function(x) x.Login <> _eu.Login)
-
-        If Not contatos Is Nothing AndAlso contatos.Count > 0 Then
-            ClienteBindingSource.DataSource = contatos
+    Private Sub AoSelecionarContatosLogados(clientes As IList(Of Contato))
+        If clientesDataGridView.InvokeRequired Then
+            Dim d As New DefinirDataSourceListaContatos(AddressOf AoSelecionarContatosLogados)
+            Invoke(d, New Object() {clientes})
         Else
-            ClienteBindingSource.DataSource = Nothing
+            ClienteBindingSource.DataSource = clientes
         End If
+        'Dim contatos = clientes.Where(Function(x) x.Login <> _eu.Login)
+
+        'If Not contatos Is Nothing AndAlso contatos.Count > 0 Then
+        '    ClienteBindingSource.DataSource = contatos
+        'Else
+        '    ClienteBindingSource.DataSource = Nothing
+        'End If
     End Sub
+
 
     Private Sub Logar()
 #If DEBUG Then
@@ -63,7 +72,7 @@ Public Class MensageiroForm
 
     Private Sub logarButton_Click(sender As System.Object, e As EventArgs) Handles logarButton.Click
         'mensageiroBackgroundWorker.RunWorkerAsync()
-        _eu.Login = mensagemTextBox.Text
+        '_eu.Login = mensagemTextBox.Text
 
         _aplicacao.Logar(_eu)
         logarButton.Visible = False

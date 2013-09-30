@@ -20,11 +20,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LogarResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Deslogar">
     <xs:complexType>
       <xs:sequence>
@@ -54,11 +49,6 @@
       <xs:sequence>
         <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PowerMessenger.Dominio.Entidades" minOccurs="0" name="clientes" nillable="true" type="q5:ArrayOfContato" />
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelecionarClientesLogadosResponse">
-    <xs:complexType>
-      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

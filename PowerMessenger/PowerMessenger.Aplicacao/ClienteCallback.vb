@@ -2,7 +2,8 @@
 Imports PowerMessenger.Aplicacao.ServidorServiceReference
 Imports System.ServiceModel
 
-<CallbackBehavior(ConcurrencyMode:=ConcurrencyMode.Reentrant, UseSynchronizationContext:=False)>
+'<CallbackBehavior(ConcurrencyMode:=ConcurrencyMode.Reentrant, UseSynchronizationContext:=False)>
+<CallbackBehavior(ConcurrencyMode:=ConcurrencyMode.Multiple, UseSynchronizationContext:=False)>
 Public Class ClienteCallback
     Implements IServidorCallback    'Eu acho que essa interface deveria ser chamar IClienteCallback, como definido, mas o nome é composto na criação do service reference.
 

@@ -21,7 +21,7 @@ Namespace ServidorServiceReference
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Transmitir", ReplyAction:="http://tempuri.org/IServidor/TransmitirResponse")>  _
         Sub Transmitir(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Logar", ReplyAction:="http://tempuri.org/IServidor/LogarResponse")>  _
+        <System.ServiceModel.OperationContractAttribute(IsOneWay:=true, Action:="http://tempuri.org/IServidor/Logar")>  _
         Sub Logar(ByVal contato As PowerMessenger.Dominio.Entidades.Contato)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Deslogar", ReplyAction:="http://tempuri.org/IServidor/DeslogarResponse")>  _
@@ -34,7 +34,7 @@ Namespace ServidorServiceReference
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/Receber", ReplyAction:="http://tempuri.org/IServidor/ReceberResponse")>  _
         Sub Receber(ByVal mensagem As PowerMessenger.Dominio.Entidades.Mensagem)
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IServidor/SelecionarClientesLogados", ReplyAction:="http://tempuri.org/IServidor/SelecionarClientesLogadosResponse")>  _
+        <System.ServiceModel.OperationContractAttribute(IsOneWay:=true, Action:="http://tempuri.org/IServidor/SelecionarClientesLogados")>  _
         Sub SelecionarClientesLogados(ByVal clientes As System.Collections.Generic.List(Of PowerMessenger.Dominio.Entidades.Contato))
     End Interface
     
