@@ -32,6 +32,20 @@ Public Class ValorReferencia
         Assert.AreEqual(x, 2)
     End Sub
 
+    <TestMethod()>
+    Public Sub TestarPassagemDeVetores()
+        Dim meuVetor(4) As String
+        meuVetor(0) = "Vítor"
+
+        Transformar(meuVetor)
+
+        Assert.AreEqual(meuVetor(0), "Avelino")
+    End Sub
+
+    Private Sub Transformar(ByVal meuVetor As String())
+        meuVetor(0) = "Avelino"
+    End Sub
+
     Private Sub TransformarByRef(ByRef x As Integer)
         x += 1
     End Sub
