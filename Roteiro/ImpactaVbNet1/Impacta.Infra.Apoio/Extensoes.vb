@@ -24,4 +24,8 @@ Public Module Extensoes
         Return retorno
     End Function
 
+    <Extension()>
+    Public Function SemAcentos(texto As String) As String
+        Return Transformar.RemoverAcentuacao(texto)
+    End Function
 End Module
