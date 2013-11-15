@@ -3,7 +3,7 @@ Public Class VetoresTestes
     <TestMethod()>
     Public Sub InicializacaoDeVetorTeste()
         'Erro!
-        'Dim meuVetor(1 To 5) As String 
+        'Dim meuVetor(0 To 5) As String
 
         'Erro!
         'Dim meuVetor(2) As String = {"Elemento 1", "Elemento 2"}
@@ -47,7 +47,7 @@ Public Class VetoresTestes
 
     <TestMethod()>
     Public Sub MatrizTeste()
-        Dim matriz(2, 3) As Integer
+        Dim matriz(0 To 2, 0 To 3) As Integer
         For linha As Integer = 0 To matriz.GetUpperBound(0)
             For coluna As Integer = 0 To matriz.GetUpperBound(1)
                 matriz(linha, coluna) = linha * coluna
@@ -55,5 +55,16 @@ Public Class VetoresTestes
             Next
             Console.WriteLine()
         Next
+    End Sub
+
+    <TestMethod()>
+    Public Sub OrdenacaoTeste()
+        Dim meuVetor() As Integer = {27, 14, 15}
+
+        Array.Sort(meuVetor)
+        Assert.AreEqual(meuVetor(0), 14)
+
+        Array.Reverse(meuVetor)
+        Assert.AreEqual(meuVetor(0), 27)
     End Sub
 End Class
