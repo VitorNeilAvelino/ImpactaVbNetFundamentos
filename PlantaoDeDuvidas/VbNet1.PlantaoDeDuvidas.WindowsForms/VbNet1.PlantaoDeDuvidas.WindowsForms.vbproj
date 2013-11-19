@@ -81,6 +81,7 @@
     <Compile Include="AbasForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacao.vb" />
     <Compile Include="CrudForm.Designer.vb">
       <DependentUpon>CrudForm.vb</DependentUpon>
     </Compile>
@@ -96,6 +97,18 @@
       <DependentUpon>ImpressaoForm.vb</DependentUpon>
     </Compile>
     <Compile Include="ImpressaoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.vb">
+      <DependentUpon>PrincipalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SelecaoArquivoForm.vb">
@@ -130,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImpressaoForm.resx">
       <DependentUpon>ImpressaoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelecaoArquivoForm.resx">
       <DependentUpon>SelecaoArquivoForm.vb</DependentUpon>
@@ -171,6 +190,14 @@
     <ProjectReference Include="..\..\Roteiro\ImpactaVbNet1\Impacta.Infra.Apoio\Impacta.Infra.Apoio.vbproj">
       <Project>{93848AC9-2C8A-4361-B01E-8140576390E9}</Project>
       <Name>Impacta.Infra.Apoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Roteiro\ImpactaVbNet1\Impacta.Infra.Dominio\Impacta.Dominio.vbproj">
+      <Project>{BE833C36-31AB-43BC-B9E0-48E054C92FF9}</Project>
+      <Name>Impacta.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Roteiro\ImpactaVbNet1\Impacta.Infra.Repositorios.SqlServer\Impacta.Infra.Repositorios.SqlServer.vbproj">
+      <Project>{93AC4024-7185-4E13-83FD-E486F4C833B8}</Project>
+      <Name>Impacta.Infra.Repositorios.SqlServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls\VbNet1.PlantaoDeDuvidas.WindowsForms.UserControls.vbproj">
       <Project>{E1EFD394-7B12-4E07-8C1E-3BC038048043}</Project>
