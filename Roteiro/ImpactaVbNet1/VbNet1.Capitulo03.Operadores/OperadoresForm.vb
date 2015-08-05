@@ -1,54 +1,39 @@
 ﻿''' <summary>
-''' Operadores estão na página 151
+''' Tipos de dados estão na página 108 do PDF do aluno.
 ''' </summary>
 ''' <remarks></remarks>
 Public Class OperadoresForm
     Inherits Windows.Forms.Form
-    Dim _a As Integer = 2, _b As Integer = 6, _c As Integer = 10, _d As Integer = 13
 
-    Private Sub aritmeticosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles aritmeticosToolStripMenuItem.Click
-        'Dim a1 = 2, b1 = 6, c1 As Decimal = 10.3, d1 = 13
-        'Dim 1bimestre as Decimal
+    Dim _a As Integer = 2
+    Dim _b As Integer = 6
+    Dim _c As Integer = 10
+    Dim _d As Integer = 15
+    Dim _f = 150
 
-        'Implicit type: none - se trocar para Error, a linha abaixo não compila
-        'Dim a, _b, _c, _d
-        'a1 = 10
-
-        'Dim a, _b, _c, _d As Integer, minhaVariavelDecimal As Decimal
-        'Dim a = 10, _b = 6, _c = 10, _d As Integer = 13
-
-        'Use variable prior to assignment - se trocar para Error, a linha abaixo não compila
-        'a = 10
-
-        'a = 10
-        '_b = 6
-        '_c = 10
-        '_d = 13
-
-        'Option Explicit - se trocar para off, a linha abaixo é permitida
-        'x = 25
-        'Dim A As Integer
+    Private Sub aritmeticosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) _
+            Handles aritmeticosToolStripMenuItem.Click
+        Dim nome As String = "Vítor"
+        Dim valor As Decimal = 22.23 'Double é o queridinho do VB.NET. Se ligar o Strict, quebra.
+        Dim opcional As Boolean = True
+        Dim dataNascimento As DateTime = New DateTime(1970, 12, 25)
 
         ExibirValoresVariaveis()
 
-        resultadoListBox.Items.Add(String.Format("_a * _b = {0}", _a * _b))
-        resultadoListBox.Items.Add(String.Format("_c / _d = {0}", _c / _d))
-        resultadoListBox.Items.Add(String.Format("_c \ _d = {0}", _c \ _d)) ' = 0, ou seja, a parte inteira
-        'resultadoListBox.Items.Add(String.Format("_c / _d = {0}", CInt(_c / _d)))    ' = 1
-        resultadoListBox.Items.Add(String.Format("_c / _d = {0}", Convert.ToInt32(_c / _d)))    ' = 1
-        resultadoListBox.Items.Add("a Mod _c = " & _a Mod _c)
-        resultadoListBox.Items.Add("a ^ _d = " & _a ^ _d)
-        'resultadoListBox.Items.Add("a ^ _d = " & Math.Pow(a, _d))
+        resultadoListBox.Items.Add(String.Concat("_a * _b = ", _a * _b))
+        resultadoListBox.Items.Add(String.Concat("_d / _a = ", _d / _a)) '7,5
+        resultadoListBox.Items.Add(String.Concat("_d \ _a = ", _d \ _a)) '7, ou seja, a parte inteira
+        resultadoListBox.Items.Add("_c Mod _a = " & _c Mod _a)
+        resultadoListBox.Items.Add("_d Mod _a = " & _d Mod _a)
+        resultadoListBox.Items.Add("a ^ _c = " & _a ^ _c)
     End Sub
 
     Private Sub ExibirValoresVariaveis()
         resultadoListBox.Items.Add("a = " & _a)
         resultadoListBox.Items.Add("_b = " & _b)
         resultadoListBox.Items.Add("_c = " & _c)
-        resultadoListBox.Items.Add("_d = " & _d)
-        'resultadoListBox.Items.Add(New String("-", 50))
-        'resultadoListBox.Items.Add(New String(CChar("-"), 100))
-        resultadoListBox.Items.Add(New String(Convert.ToChar("-"), 50))
+        resultadoListBox.Items.Add("_d = " + _d.ToString())
+        resultadoListBox.Items.Add(New String("-", 100))
     End Sub
 
     Private Sub ReduzidosToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles ReduzidosToolStripMenuItem.Click
@@ -64,20 +49,22 @@ Public Class OperadoresForm
     Private Sub BooleanosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles BooleanosToolStripMenuItem.Click
         ExibirValoresVariaveis()
 
-        resultadoListBox.Items.Add(String.Format("a >= _b = {0}", _a >= _b))
-        resultadoListBox.Items.Add(String.Format("_c <= _d = {0}", _c <= _d))
-        resultadoListBox.Items.Add(String.Format("a <> _c = {0}", _a <> _c))
+        resultadoListBox.Items.Add("a >= _b = " & (_a >= _b)) ' sem os () dá erro de cast.
+        resultadoListBox.Items.Add("_c <= _d = " & (_c <= _d))
+        resultadoListBox.Items.Add("a <> _c = " & (_a <> _c))
     End Sub
 
     Private Sub logicosToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles logicosToolStripMenuItem.Click
         ExibirValoresVariaveis()
 
-        resultadoListBox.Items.Add(String.Format("a < _b Or _c = _d = {0}", _a < _b Or _c = _d))
-        resultadoListBox.Items.Add(String.Format("a = _b And _c <> _d = {0}", _a = _b And _c <> _d))
-        resultadoListBox.Items.Add(String.Format("Not(a > _b) = {0}", Not (_a > _b)))
-        resultadoListBox.Items.Add(String.Format("a < _b OrElse Foobar() = {0}", _a < _b OrElse Foobar()))
-        resultadoListBox.Items.Add(String.Format("a = _b AndAlso Foobar() = {0}", _a = _b AndAlso Foobar()))
-        'resultadoListBox.Items.Add(CBool(Foobar()))
+        resultadoListBox.Items.Add("a < _b Or _c = _d = " & (_a < _b Or _c = _d))
+        resultadoListBox.Items.Add("a = _b And _c <> _d = " & (_a = _b And _c <> _d))
+        resultadoListBox.Items.Add("a < _b OrElse Foobar() = " & (_a < _b OrElse Foobar()))
+        resultadoListBox.Items.Add("a = _b AndAlso Foobar() = " & (_a = _b AndAlso Foobar()))
+        resultadoListBox.Items.Add("Not(a > _b) = " & Not (_a > _b))
+
+        'Dim zero As Byte = 0
+        'resultadoListBox.Items.Add(Not zero) 'Not(00000000) = 11111111 = 255
     End Sub
 
     Private Function Foobar() As Boolean
@@ -88,18 +75,9 @@ Public Class OperadoresForm
 
     Private Sub ternarioToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles ternarioToolStripMenuItem.Click
         Dim ano = 2014
-        resultadoListBox.Items.Add(String.Format("O ano {0} é bissexto? {1}.", ano, If(ano Mod 4 = 0, "Sim", "Não")))
+        resultadoListBox.Items.Add(String.Format("O ano {0} é bissexto? {1}.", ano, IIf(ano Mod 4 = 0, "Sim", "Não")))
 
         ano = 2016
-        resultadoListBox.Items.Add(String.Format("O ano {0} é bissexto? {1}.", ano, IIf(DateTime.IsLeapYear(ano), "Sim", "Não")))
-
-        'resultadoListBox.Items.Add((Not 23) > 14)
-        'resultadoListBox.Items.Add(Not 23 > 67)
-    End Sub
-
-    Private Sub precedenciaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles precedenciaToolStripMenuItem.Click
-        ExibirValoresVariaveis()
-
-        resultadoListBox.Items.Add(String.Format("_a < _c OrElse _b <> _a AndAlso _a = _b = {0}", _a < _c OrElse _b <> _a AndAlso _a = _b))
+        resultadoListBox.Items.Add(String.Format("O ano {0} é bissexto? {1}.", ano, If(DateTime.IsLeapYear(ano), "Sim", "Não")))
     End Sub
 End Class
