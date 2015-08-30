@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.Capitulo01.HelloWorld", "VbNet1.Capitulo01.HelloWorld\VbNet1.Capitulo01.HelloWorld.vbproj", "{A8469C4E-96F0-49DD-9872-72CD00875977}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboratorios", "Laboratorios", "{D8B168B1-8367-4698-9104-16FBAAC5BC51}"
@@ -60,9 +62,11 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.Repositorios.MsAcces
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.Repositorios.MsAccess.Testes", "VbNet1.Repositorios.MsAccess.Testes\VbNet1.Repositorios.MsAccess.Testes.vbproj", "{C236A9BD-BC06-462E-B055-34CAE32E46B6}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbNet1.Capitulo05.Fretes", "..\..\Aulas\2015-08-23\ImpactaVbNet1\VbNet1.Capitulo05.Fretes\VbNet1.Capitulo05.Fretes.vbproj", "{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 25
+		SccNumberOfProjects = 26
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -155,9 +159,10 @@ Global
 		SccProjectTopLevelParentUniqueName24 = ImpactaVbNet1.sln
 		SccProjectName24 = VbNet1.Repositorios.MsAccess.Testes
 		SccLocalPath24 = VbNet1.Repositorios.MsAccess.Testes
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = ImpactaVbNet1.vsmdi
+		SccProjectUniqueName25 = ..\\..\\Aulas\\2015-08-23\\ImpactaVbNet1\\VbNet1.Capitulo05.Fretes\\VbNet1.Capitulo05.Fretes.vbproj
+		SccProjectTopLevelParentUniqueName25 = ImpactaVbNet1.sln
+		SccProjectName25 = ../../Aulas/2015-08-23/ImpactaVbNet1/VbNet1.Capitulo05.Fretes
+		SccLocalPath25 = ..\\..\\Aulas\\2015-08-23\\ImpactaVbNet1\\VbNet1.Capitulo05.Fretes
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -469,9 +474,7 @@ Global
 		{0DB817E1-7A54-419A-AAAD-662EE3042824}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0DB817E1-7A54-419A-AAAD-662EE3042824}.Release|x86.ActiveCfg = Release|Any CPU
 		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Development|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B3A5537-BCB6-45F3-839A-3736D6C11516}.Development|Any CPU.Build.0 = Debug|Any CPU
@@ -528,6 +531,21 @@ Global
 		{C236A9BD-BC06-462E-B055-34CAE32E46B6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C236A9BD-BC06-462E-B055-34CAE32E46B6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C236A9BD-BC06-462E-B055-34CAE32E46B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Debug|x86.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Debug|x86.Build.0 = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Development|Any CPU.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Development|Mixed Platforms.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Development|Mixed Platforms.Build.0 = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Development|x86.ActiveCfg = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Development|x86.Build.0 = Debug|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Release|Any CPU.ActiveCfg = Release|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Release|x86.ActiveCfg = Release|x86
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -537,19 +555,23 @@ Global
 		{6C6ADAA8-2B7B-4A38-AC7B-418039F361B9} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{83844FCD-A318-4075-A221-F9549CC40933} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{BE2E8F97-0955-4CD1-BDE8-4EBB593AC023} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
-		{2B8BFC0D-AE7A-4A3C-802E-DD9FDD1B0FEE} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
-		{245723C0-8FE6-4508-AD0C-BC14741AF24C} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
-		{06DB1DE0-21D0-4C3B-829E-217FD5E527C7} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
-		{962D9412-9839-480D-9D4D-4E53ECD69E0F} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{C0187D82-0E7F-4313-9E08-93793DF6BD24} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{C08E490D-5CAF-4ED9-857A-20D25F3A4E2D} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{727F70AA-4801-43D6-8577-9CF3025F5C28} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
+		{2B8BFC0D-AE7A-4A3C-802E-DD9FDD1B0FEE} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
+		{245723C0-8FE6-4508-AD0C-BC14741AF24C} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{13E00313-808D-4F21-AEBA-771147ED380A} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
+		{06DB1DE0-21D0-4C3B-829E-217FD5E527C7} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{E5EBD859-7A6C-4FF6-A600-B0CD53DBCFBA} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
+		{962D9412-9839-480D-9D4D-4E53ECD69E0F} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
 		{F5F47D9E-A9FD-4B4B-8FFE-F90301DA9429} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{A78A0CAA-4753-4508-B7C0-F7BC54B32268} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{0DB817E1-7A54-419A-AAAD-662EE3042824} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{8A98E4CF-BA08-4F1C-8BDA-1625FA932991} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
 		{C236A9BD-BC06-462E-B055-34CAE32E46B6} = {EFFB5A1F-2599-42B9-B40C-C12037F3640B}
+		{C2AA0408-5D9D-4F45-9918-CF90C56EC1A7} = {D8B168B1-8367-4698-9104-16FBAAC5BC51}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ImpactaVbNet1.vsmdi
 	EndGlobalSection
 EndGlobal
